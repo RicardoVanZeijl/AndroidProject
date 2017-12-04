@@ -1,7 +1,7 @@
 package be.thomasmore.androidproject;
 
 /**
- * Created by ricar on 4/12/2017.
+ * Created by Ricardo van Zeijl on 4/12/2017.
  */
 
 public class Woord {

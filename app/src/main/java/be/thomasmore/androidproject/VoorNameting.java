@@ -1,7 +1,7 @@
 package be.thomasmore.androidproject;
 
 /**
- * Created by ricar on 4/12/2017.
+ * Created by Ricardo van Zeijl on 28/11/2017.
  */
 
 import android.content.Intent;
