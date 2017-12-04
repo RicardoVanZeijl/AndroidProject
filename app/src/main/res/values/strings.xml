@@ -4,5 +4,5 @@
     <string name="title_activity_voor_nameting">VoorNameting</string>
 
     <!--Custom Resources-->
-
+    <string name="word">Random Woord</string>
 </resources>

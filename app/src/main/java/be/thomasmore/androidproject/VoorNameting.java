@@ -31,12 +31,12 @@ public class VoorNameting extends AppCompatActivity {
         //get a reference to the button element listed in the XML layout
         ImageButton speakButton = (ImageButton) findViewById(R.id.imageButtonTTS);
         //listen for clicks
-        speakButton.setOnClickListener((View.OnClickListener) this);
+        //speakButton.setOnClickListener((View.OnClickListener) this);
 
         //check for TTS data
         Intent checkTTSIntent = new Intent();
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-        startActivityForResult(checkTTSIntent, MY_DATA_CHECK_CODE);
+        //startActivityForResult(checkTTSIntent, MY_DATA_CHECK_CODE);
 
         //check on savedInstance
         if (savedInstanceState != null) {
@@ -46,7 +46,7 @@ public class VoorNameting extends AppCompatActivity {
         //initial TTS
         TextView textViewWord = (TextView)findViewById(R.id.word);
         String word = textViewWord.getText().toString();
-        speakWords(word);
+        //speakWords(word);
 
 
     }
