@@ -71,6 +71,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
         String CREATE_TABLE_FOUTENLIJST = "CREATE TABLE foutenlijst (" +
                 "foutenlijstID INTEGER PRIMARY KEY AUTOINCREMENT," +
+                "FOREIGN KEY (onderzoekID) REFERENCES onderzoek(onderzoekID)," +
                 "FOREIGN KEY (woordID) REFERENCES woord(woordID))";
         db.execSQL(CREATE_TABLE_FOUTENLIJST);
 
