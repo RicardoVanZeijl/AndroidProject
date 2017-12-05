@@ -1,5 +1,9 @@
 package be.thomasmore.androidproject;
 
+/**
+ * Created by Ricardo van Zeijl on 28/11/2017.
+ */
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
