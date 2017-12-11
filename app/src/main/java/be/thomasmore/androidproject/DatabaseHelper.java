@@ -1,9 +1,5 @@
 package be.thomasmore.androidproject;
 
-/**
- * Created by Ricardo van Zeijl on 4/12/2017.
- */
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -12,6 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * Created by Ricardo van Zeijl on 4/12/2017.
+ *
+ */
 
 public class DatabaseHelper extends SQLiteOpenHelper{
 
@@ -119,7 +120,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     public List<Groep> getGroepen() {
-        List<Groep> lijst = new ArrayList<Groep>();
+        List<Groep> lijst = new ArrayList<>();
 
         String selectQuery = "SELECT  * FROM groep ORDER BY naam";
 
@@ -130,6 +131,47 @@ public class DatabaseHelper extends SQLiteOpenHelper{
             do {
                 Groep groep = new Groep(cursor.getLong(0), cursor.getString(1));
                 lijst.add(groep);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //'lijst' tijdelijk aangepast naar list
+    public List<Lijst> getLijsten() {
+        List<Lijst> list = new ArrayList<>();
+
+        String selectQuery = "SELECT  * FROM lijst ORDER BY naam";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Lijst lijst = new Lijst(cursor.getLong(0), cursor.getString(1));
+                list.add(lijst);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return list;
+    }
+
+    public List<Woord> getWoordenFromLijst(long lijstID) {
+        List<Woord> lijst = new ArrayList<>();
+
+        String selectQuery = "SELECT  * FROM woord w INNER JOIN woordenlijst wl ON (w.woordID = wl.woordID) where wl.lijstID = " + lijstID + " ORDER BY w.woord";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Woord woord = new Woord(cursor.getLong(0), cursor.getString(1));
+                lijst.add(woord);
             } while (cursor.moveToNext());
         }
 
