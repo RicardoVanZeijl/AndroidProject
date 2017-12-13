@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">AndroidProject</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_splashscreen">SplashScreen</string>
     <string name="title_activity_voor_nameting">VoorNameting</string>
 
     <!--Custom Resources-->
-    <string name="word">Random Woord</string>
+    <string name="randomWord">Random Woord</string>
+    <string name="randomImage">Random Afbeelding</string>
+    <string name="title_activity_voormeting">Voormeting</string>
+    <string name="title_activity_training">Training</string>
 </resources>

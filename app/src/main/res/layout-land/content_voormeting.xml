@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="be.thomasmore.androidproject.VoorNameting"
-    tools:showIn="@layout/activity_voor_nameting">
+    tools:context="be.thomasmore.androidproject.Voormeting"
+    tools:showIn="@layout/activity_voormeting">
 
     <RelativeLayout
         android:layout_width="0dp"
@@ -27,55 +27,66 @@
         android:layout_marginRight="8dp">
 
         <TextView
-            android:id="@+id/word"
+            android:id="@+id/randomWoord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_alignParentTop="true"
             android:textSize="21sp"
+            android:text="@string/randomWord"
             />
 
-        <ImageButton
-            android:id="@+id/imageButtonTTS"
-            android:layout_width="21dp"
-            android:layout_height="21dp"
-            android:layout_toRightOf="@+id/word"
-            android:background="@drawable/texttospeech"
-            android:onClick="imageButtonTTSOnClick" />
+        <!--<ImageButton-->
+            <!--android:id="@+id/TTS"-->
+            <!--android:layout_width="21dp"-->
+            <!--android:layout_height="21dp"-->
+            <!--android:layout_toRightOf="@+id/randomWoord"-->
+            <!--android:background="@drawable/texttospeech"-->
+            <!--android:onClick="onClickTTS" />-->
 
         <ImageView
-            android:id="@+id/imageViewWord1"
+            android:id="@+id/randomAfbeelding0"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_below="@+id/word"
+            android:layout_below="@+id/randomWoord"
             android:layout_margin="8dp"
-            android:background="@drawable/randomimage" />
+            android:background="@drawable/randomimage"
+            android:contentDescription="@string/randomImage"
+            android:onClick="onClickRandomAfbeelding" />
 
         <ImageView
-            android:id="@+id/imageViewWord2"
+            android:id="@+id/randomAfbeelding1"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_below="@+id/word"
+            android:layout_below="@+id/randomWoord"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_margin="8dp"
-            android:background="@drawable/randomimage" />
+            android:background="@drawable/randomimage"
+            android:contentDescription="@string/randomImage"
+            android:onClick="onClickRandomAfbeelding" />
 
         <ImageView
-            android:id="@+id/imageViewWord3"
+            android:id="@+id/randomAfbeelding2"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_below="@+id/imageViewWord2"
+            android:layout_below="@+id/randomAfbeelding0"
             android:layout_margin="8dp"
-            android:background="@drawable/randomimage"/>
+            android:background="@drawable/randomimage"
+            android:contentDescription="@string/randomImage"
+            android:onClick="onClickRandomAfbeelding" />
 
         <ImageView
-            android:id="@+id/imageViewWord4"
+            android:id="@+id/randomAfbeelding3"
             android:layout_width="250dp"
             android:layout_height="150dp"
-            android:layout_below="@+id/imageViewWord1"
+            android:layout_below="@+id/randomAfbeelding1"
             android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_margin="8dp"
-            android:background="@drawable/randomimage" />
+            android:background="@drawable/randomimage"
+            android:contentDescription="@string/randomImage"
+            android:onClick="onClickRandomAfbeelding" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

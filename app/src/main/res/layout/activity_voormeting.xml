@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="be.thomasmore.androidproject.VoorNameting">
+    tools:context="be.thomasmore.androidproject.Voormeting">
 
-    <include layout="@layout/content_voor_nameting" />
+    <include layout="@layout/content_voormeting" />
 
 </android.support.design.widget.CoordinatorLayout>
