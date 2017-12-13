@@ -29,4 +29,8 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
+    <style name="SplashThema" parent="AppTheme">
+        <item name="android:windowBackground">@layout/content_splash</item>
+    </style>
+
 </resources>
