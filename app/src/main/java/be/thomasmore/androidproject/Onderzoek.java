@@ -2,15 +2,14 @@ package be.thomasmore.androidproject;
 
 /**
  * Created by Ricardo van Zeijl on 4/12/2017.
+ *
  */
 
 public class Onderzoek {
     private long onderzoekID;
-    private long studentID;
+    private long groepID;
     private long lijstID;
     private long onderdeelID;
-    private String score;
-    private String tijd;
 
     public long getOnderzoekID() {
         return onderzoekID;
@@ -20,12 +19,12 @@ public class Onderzoek {
         this.onderzoekID = onderzoekID;
     }
 
-    public long getStudentID() {
-        return studentID;
+    public long getGroepID() {
+        return groepID;
     }
 
-    public void setStudentID(long studentID) {
-        this.studentID = studentID;
+    public void setGroepID(long groepID) {
+        this.groepID = groepID;
     }
 
     public long getLijstID() {
@@ -44,43 +43,24 @@ public class Onderzoek {
         this.onderdeelID = onderdeelID;
     }
 
-    public String getScore() {
-        return score;
-    }
-
-    public void setScore(String score) {
-        this.score = score;
-    }
-
-    public String getTijd() {
-        return tijd;
-    }
-
-    public void setTijd(String tijd) {
-        this.tijd = tijd;
-    }
-
     public Onderzoek() {
     }
 
-    public Onderzoek(long onderzoekID, long studentID, long lijstID, long onderdeelID, String score, String tijd) {
+    public Onderzoek(long onderzoekID, long groepID, long lijstID, long onderdeelID) {
         this.onderzoekID = onderzoekID;
-        this.studentID = studentID;
+        this.groepID = groepID;
         this.lijstID = lijstID;
         this.onderdeelID = onderdeelID;
-        this.score = score;
-        this.tijd = tijd;
     }
 
     @Override
     public String toString() {
         return "Onderzoek{" +
                 "onderzoekID=" + onderzoekID +
-                ", studentID=" + studentID +
+                ", groepID=" + groepID +
                 ", lijstID=" + lijstID +
                 ", onderdeelID=" + onderdeelID +
-                ", score='" + score + '\'' +
-                ", tijd='" + tijd + '\'' +
                 '}';
     }
+
 }

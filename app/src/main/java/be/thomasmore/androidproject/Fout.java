@@ -2,19 +2,20 @@ package be.thomasmore.androidproject;
 
 /**
  * Created by Ricardo van Zeijl on 4/12/2017.
+ *
  */
 
-public class Foutenlijst {
-    private long foutenlijstID;
+public class Fout {
+    private long foutID;
     private long onderzoekID;
     private long woordID;
 
-    public long getFoutenlijstID() {
-        return foutenlijstID;
+    public long getFoutID() {
+        return foutID;
     }
 
-    public void setFoutenlijstID(long foutenlijstID) {
-        this.foutenlijstID = foutenlijstID;
+    public void setFoutID(long foutID) {
+        this.foutID = foutID;
     }
 
     public long getOnderzoekID() {
@@ -33,19 +34,19 @@ public class Foutenlijst {
         this.woordID = woordID;
     }
 
-    public Foutenlijst() {
+    public Fout() {
     }
 
-    public Foutenlijst(long foutenlijstID, long onderzoekID, long woordID) {
-        this.foutenlijstID = foutenlijstID;
+    public Fout(long foutID, long onderzoekID, long woordID) {
+        this.foutID = foutID;
         this.onderzoekID = onderzoekID;
         this.woordID = woordID;
     }
 
     @Override
     public String toString() {
-        return "Foutenlijst{" +
-                "foutenlijstID=" + foutenlijstID +
+        return "Fout{" +
+                "foutID=" + foutID +
                 ", onderzoekID=" + onderzoekID +
                 ", woordID=" + woordID +
                 '}';
