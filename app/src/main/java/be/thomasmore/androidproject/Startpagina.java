@@ -17,12 +17,17 @@ import java.util.List;
 
 public class Startpagina extends AppCompatActivity {
 
+    private DatabaseHelper db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startpagina);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        db = new DatabaseHelper(this);
+        readGroepen();
 
         Spinner spinner = (Spinner) findViewById(R.id.groepenSpinner);
 
@@ -37,7 +42,14 @@ public class Startpagina extends AppCompatActivity {
         });
     }
 
+    private void readGroepen() {
+        final List<Groep> groepen = db.getGroepen();
 
+        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, android.R.layout.simple_spinner_item, groepen);
+
+        final Spinner groepenSpinner = (Spinner) findViewById(R.id.groepenSpinner);
+        groepenSpinner.setAdapter(adapter);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
