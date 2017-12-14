@@ -8,18 +8,6 @@
     android:orientation="vertical"
     tools:showIn="@layout/activity_startpagina">
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, I am a TextView" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello, I am a Button" />
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +21,40 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
+
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textNaam"
+                android:text="Naam:" />
+
+            <EditText android:id="@+id/naam" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textNaam1"
+                android:text="Groep:" />
+
+            <EditText android:id="@+id/naamGroep" />
+
+            <android.support.v7.widget.AppCompatSpinner android:id="@+id/groepenSpinner"></android.support.v7.widget.AppCompatSpinner>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView />
+
+            <Button
+                android:id="@+id/buttonStart"
+                android:text="Start" />
+        </TableRow>
+    </TableLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"

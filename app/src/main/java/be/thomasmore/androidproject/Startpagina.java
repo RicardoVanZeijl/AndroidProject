@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.database.*;
+import android.widget.Spinner;
 
 import java.util.List;
 
@@ -23,6 +24,7 @@ public class Startpagina extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        Spinner spinner = (Spinner) findViewById(R.id.groepenSpinner);
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -35,15 +37,7 @@ public class Startpagina extends AppCompatActivity {
         });
     }
 
-    private void readGroepen() {
-        final List<Groep> groepen = db.getGroepen();
 
-        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, R.layout.activity_main, R.id.listViewGroepen);
-
-        final ListView listViewGroepen = (ListView) findViewById(R.id.listViewGroepen);
-        listViewGroepen.setAdapter(adapter);
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
