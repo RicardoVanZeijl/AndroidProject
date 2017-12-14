@@ -1,15 +1,14 @@
 package be.thomasmore.androidproject;
 
-/**
- * Created by larsg on 4/12/2017.
- */
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
-import static java.lang.Thread.sleep;
+/**
+ * Created by larsg on 4/12/2017.
+ *
+ */
 
 public class SplashScreen extends AppCompatActivity {
 
@@ -17,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splashscreen);
         super.onCreate(savedInstanceState);
 
         new Handler().postDelayed(new Runnable() {

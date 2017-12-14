@@ -17,10 +17,15 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Startpagina -->
+        <activity
+            android:name=".Startpagina"
+            android:label="Startpagina"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Voormeting -->
         <activity
