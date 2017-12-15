@@ -91,8 +91,9 @@ public class Voormeting extends AppCompatActivity {
             index++;
         } else {
             Bundle bundle = new Bundle();
+            bundle.putLong("studentID", studentID);
             bundle.putLong("groepID", groepID);
-            Intent intent = new Intent(this, Training.class);
+            Intent intent = new Intent(this, Pretraining.class  );
             intent.putExtras(bundle);
             startActivity(intent);
         }

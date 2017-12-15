@@ -7,6 +7,8 @@
     <!--Custom Resources-->
     <string name="randomWord">Random Woord</string>
     <string name="randomImage">Random Afbeelding</string>
+    <string name="pretrainingAfbeelding">Afbeelding Pretraining</string>
     <string name="title_activity_voormeting">Voormeting</string>
     <string name="title_activity_training">Training</string>
+    <string name="title_activity_pretraining">Pretraining</string>
 </resources>
