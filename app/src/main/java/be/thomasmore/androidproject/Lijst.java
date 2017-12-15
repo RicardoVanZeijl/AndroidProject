@@ -2,6 +2,7 @@ package be.thomasmore.androidproject;
 
 /**
  * Created by Ricardo van Zeijl on 4/12/2017.
+ *
  */
 
 public class Lijst {
@@ -34,9 +35,6 @@ public class Lijst {
 
     @Override
     public String toString() {
-        return "Lijst{" +
-                "lijstID=" + lijstID +
-                ", naam='" + naam + '\'' +
-                '}';
+        return naam;
     }
 }

@@ -22,7 +22,13 @@ public class Voormeting extends AppCompatActivity {
 
     List<Woord> woorden;
     List<String> afbeeldingen;
-    long groepID;
+
+    //Testgegevens, wordt meegegeven met bundle
+    long studentID = 1;
+    long groepID = 1;
+
+    long onderdeelID = 1;
+
     int index;
     int score;
 
@@ -33,11 +39,12 @@ public class Voormeting extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-        Bundle bundle = getIntent().getExtras();
-        groepID = bundle.getLong("groepID");
+//        Bundle bundle = getIntent().getExtras();
+//        studentID = bundle.getLong("studentID");
+//        groepID = bundle.getLong("groepID");
 
         Onderzoek onderzoek;
-        onderzoek = db.getOnderzoek(groepID, 1);
+        onderzoek = db.getOnderzoek(groepID, onderdeelID);
 
         long lijstID = onderzoek.getLijstID();
 
@@ -96,6 +103,13 @@ public class Voormeting extends AppCompatActivity {
 
         if (Integer.parseInt(image.getTag().toString()) == woorden.get(index).getWoordID()){
             score+=1;
+        } else {
+            Fout fout = new Fout();
+            fout.setStudentID(studentID);
+            fout.setOnderdeelID(onderdeelID);
+            fout.setWoordID(woorden.get(index).getWoordID());
+
+            db.insertFout(fout);
         }
 
         volgendWoord();

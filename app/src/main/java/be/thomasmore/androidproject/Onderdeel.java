@@ -2,6 +2,7 @@ package be.thomasmore.androidproject;
 
 /**
  * Created by Ricardo van Zeijl on 4/12/2017.
+ *
  */
 
 public class Onderdeel {
@@ -34,9 +35,6 @@ public class Onderdeel {
 
     @Override
     public String toString() {
-        return "Onderdeel{" +
-                "onderdeelID=" + onderdeelID +
-                ", naam='" + naam + '\'' +
-                '}';
+        return naam;
     }
 }

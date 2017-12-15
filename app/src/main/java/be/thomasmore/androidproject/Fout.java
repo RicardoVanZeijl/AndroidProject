@@ -7,7 +7,8 @@ package be.thomasmore.androidproject;
 
 public class Fout {
     private long foutID;
-    private long onderzoekID;
+    private long studentID;
+    private long onderdeelID;
     private long woordID;
 
     public long getFoutID() {
@@ -18,12 +19,20 @@ public class Fout {
         this.foutID = foutID;
     }
 
-    public long getOnderzoekID() {
-        return onderzoekID;
+    public long getStudentID() {
+        return studentID;
     }
 
-    public void setOnderzoekID(long onderzoekID) {
-        this.onderzoekID = onderzoekID;
+    public void setStudentID(long studentID) {
+        this.studentID = studentID;
+    }
+
+    public long getOnderdeelID() {
+        return onderdeelID;
+    }
+
+    public void setOnderdeelID(long onderdeelID) {
+        this.onderdeelID = onderdeelID;
     }
 
     public long getWoordID() {
@@ -37,9 +46,10 @@ public class Fout {
     public Fout() {
     }
 
-    public Fout(long foutID, long onderzoekID, long woordID) {
+    public Fout(long foutID, long studentID, long onderdeelID, long woordID) {
         this.foutID = foutID;
-        this.onderzoekID = onderzoekID;
+        this.studentID = studentID;
+        this.onderdeelID = onderdeelID;
         this.woordID = woordID;
     }
 
@@ -47,7 +57,8 @@ public class Fout {
     public String toString() {
         return "Fout{" +
                 "foutID=" + foutID +
-                ", onderzoekID=" + onderzoekID +
+                ", studentID=" + studentID +
+                ", onderdeelID=" + onderdeelID +
                 ", woordID=" + woordID +
                 '}';
     }
