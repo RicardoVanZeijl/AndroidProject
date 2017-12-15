@@ -16,36 +16,36 @@ public class Score {
         return scoreID;
     }
 
-    public long getStudentID() {
-        return studentID;
-    }
-
-    public long getOnderdeelID() {
-        return onderdeelID;
-    }
-
-    public String getScore() {
-        return score;
-    }
-
-    public String getTijd() {
-        return tijd;
-    }
-
     public void setScoreID(long scoreID) {
         this.scoreID = scoreID;
+    }
+
+    public long getStudentID() {
+        return studentID;
     }
 
     public void setStudentID(long studentID) {
         this.studentID = studentID;
     }
 
+    public long getOnderdeelID() {
+        return onderdeelID;
+    }
+
     public void setOnderdeelID(long onderdeelID) {
         this.onderdeelID = onderdeelID;
     }
 
+    public String getScore() {
+        return score;
+    }
+
     public void setScore(String score) {
         this.score = score;
+    }
+
+    public String getTijd() {
+        return tijd;
     }
 
     public void setTijd(String tijd) {
