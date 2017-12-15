@@ -8,6 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.database.*;
+
+import java.util.List;
 
 public class Startpagina extends AppCompatActivity {
 
@@ -19,6 +24,7 @@ public class Startpagina extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +33,16 @@ public class Startpagina extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void readGroepen() {
+        final List<Groep> groepen = db.getGroepen();
+
+        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, R.layout.activity_main, R.id.listViewGroepen);
+
+        final ListView listViewGroepen = (ListView) findViewById(R.id.listViewGroepen);
+        listViewGroepen.setAdapter(adapter);
+
     }
 
     @Override
