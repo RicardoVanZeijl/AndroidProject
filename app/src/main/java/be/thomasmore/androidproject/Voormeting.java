@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -21,7 +22,6 @@ public class Voormeting extends AppCompatActivity {
     private DatabaseHelper db;
 
     List<Woord> woorden;
-    List<String> afbeeldingen;
 
     //Testgegevens, wordt meegegeven met bundle
     long studentID = 1;
@@ -59,10 +59,12 @@ public class Voormeting extends AppCompatActivity {
     }
 
     private void volgendWoord(){
-        TextView word = findViewById(R.id.randomWoord);
-        word.setText(woorden.get(index).getWoord());
+        TextView woord = findViewById(R.id.randomWoord);
+        woord.setText(woorden.get(index).getWoord());
 
-        afbeeldingen.add(String.valueOf(woorden.get(index).getWoordID()));
+        ArrayList<String> afbeeldingen = new ArrayList<>();
+
+        afbeeldingen.add(String.valueOf(woorden.get(index).getWoord().toLowerCase()));
 
         Random rnd = new Random();
 
@@ -74,17 +76,19 @@ public class Voormeting extends AppCompatActivity {
 //                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
 //            }
 
-            if (afbeeldingen.contains(String.valueOf(randomGetal))) {
-                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
+            if (!afbeeldingen.contains(String.valueOf(woorden.get(randomGetal).getWoord().toLowerCase()))) {
+                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoord().toLowerCase()));
             }
         }
 
         Collections.shuffle(afbeeldingen);
 
-        for (int i=0; i<3; i++) {
-            ImageView image = findViewById(getResources().getIdentifier("randomAfbeelding" + i, "id", getPackageName()));
+        for (int i=0; i < afbeeldingen.size(); i++) {
+            ImageView image = findViewById(getResources().getIdentifier(("randomAfbeelding" + i), "id", getPackageName()));
             image.setImageResource(getResources().getIdentifier(afbeeldingen.get(i), "drawable", getPackageName()));
-            image.setTag(woorden.get(index).getWoordID());
+            //Verkeerde tag wordt meegegeven
+            //image.setTag(woorden.get(index).getWoordID());
+            image.setTag(afbeeldingen.get(i).toLowerCase());
         }
 
         if (index<20) {
@@ -93,7 +97,7 @@ public class Voormeting extends AppCompatActivity {
             Bundle bundle = new Bundle();
             bundle.putLong("studentID", studentID);
             bundle.putLong("groepID", groepID);
-            Intent intent = new Intent(this, Pretraining.class  );
+            Intent intent = new Intent(this, Preteaching.class  );
             intent.putExtras(bundle);
             startActivity(intent);
         }
@@ -102,7 +106,18 @@ public class Voormeting extends AppCompatActivity {
     public void onClickRandomAfbeelding(View view) {
         ImageView image = (ImageView) view;
 
-        if (Integer.parseInt(image.getTag().toString()) == woorden.get(index).getWoordID()){
+//        if (Integer.parseInt(image.getTag().toString()) == woorden.get(index).getWoordID()){
+//            score+=1;
+//        } else {
+//            Fout fout = new Fout();
+//            fout.setStudentID(studentID);
+//            fout.setOnderdeelID(onderdeelID);
+//            fout.setWoordID(woorden.get(index).getWoordID());
+//
+//            db.insertFout(fout);
+//        }
+
+        if (image.getTag().toString().equalsIgnoreCase(woorden.get(index).getWoord())){
             score+=1;
         } else {
             Fout fout = new Fout();

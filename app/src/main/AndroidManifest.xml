@@ -46,10 +46,10 @@
             android:label="@string/title_activity_training"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <!-- Pretraining -->
+        <!-- Preteaching -->
         <activity
-            android:name=".Pretraining"
-            android:label="@string/title_activity_pretraining"
+            android:name=".Preteaching"
+            android:label="@string/title_activity_preteaching"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
