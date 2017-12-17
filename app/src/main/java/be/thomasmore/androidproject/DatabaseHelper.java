@@ -115,7 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     }
 
     private void insertWoorden(SQLiteDatabase db) {
-        db.execSQL("INSERT INTO woord (woordID, woord) VALUES (1, 'A');");
+        db.execSQL("INSERT INTO woord (woordID, woord) VALUES (1, '');");
         db.execSQL("INSERT INTO woord (woordID, woord) VALUES (2, 'B');");
         db.execSQL("INSERT INTO woord (woordID, woord) VALUES (3, 'C');");
         db.execSQL("INSERT INTO woord (woordID, woord) VALUES (4, 'D');");
@@ -233,7 +233,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public List<Groep> getGroepen() {
         List<Groep> lijst = new ArrayList<>();
 
-        String selectQuery = "SELECT  * FROM groep ORDER BY naam";
+        String selectQuery = "SELECT * FROM groep ORDER BY naam";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
@@ -271,18 +271,35 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return list;
     }
 
-    public Onderzoek getOnderzoek(long groepID, long onderdeelID) {
-        SQLiteDatabase db = this.getReadableDatabase();
+//    public Onderzoek getOnderzoek(long groepID, long onderdeelID) {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//
+//        Cursor cursor = db.query(
+//                "onderzoek",
+//                new String[] { "onderzoekID", "groepID", "lijstID", "onderdeelID" },
+//                "groepID = ? AND onderdeelID = ?",
+//                new String[] { String.valueOf(groepID),  String.valueOf(onderdeelID) },
+//                null,
+//                null,
+//                null,
+//                null);
+//
+//        Onderzoek onderzoek = new Onderzoek();
+//
+//        if (cursor.moveToFirst()) {
+//            onderzoek = new Onderzoek(cursor.getLong(0),
+//                    cursor.getLong(1), cursor.getLong(2), cursor.getLong(3));
+//        }
+//        cursor.close();
+//        db.close();
+//        return onderzoek;
+//    }
 
-        Cursor cursor = db.query(
-                "onderzoek",
-                new String[] { "onderzoekID", "groepID", "lijstID", "onderdeelID" },
-                "groepID = ? AND onderdeelID = ?",
-                new String[] { String.valueOf(groepID),  String.valueOf(onderdeelID) },
-                null,
-                null,
-                null,
-                null);
+    public Onderzoek getOnderzoek(long groepID, long onderdeelID) {
+        String selectQuery = "SELECT * FROM onderzoek WHERE groepID = " + groepID + " AND onderdeelID = " + onderdeelID + " ";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
 
         Onderzoek onderzoek = new Onderzoek();
 
@@ -298,7 +315,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public List<Woord> getWoordenFromLijst(long lijstID) {
         List<Woord> lijst = new ArrayList<>();
 
-        String selectQuery = "SELECT  * FROM woord w INNER JOIN woordenlijst wl ON (w.woordID = wl.woordID) where wl.lijstID = " + lijstID + " ORDER BY w.woord";
+        String selectQuery = "SELECT * FROM woord w INNER JOIN woordenlijst wl ON (w.woordID = wl.woordID) where wl.lijstID = " + lijstID + " ORDER BY w.woord";
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);

@@ -79,7 +79,6 @@ public class Startpagina extends AppCompatActivity {
         });
     }
 
-
     private void readGroepen() {
         final List<Groep> groepen = db.getGroepen();
 
