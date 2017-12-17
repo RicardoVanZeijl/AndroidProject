@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Random;
@@ -39,9 +40,9 @@ public class Voormeting extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-//        Bundle bundle = getIntent().getExtras();
-//        studentID = bundle.getLong("studentID");
-//        groepID = bundle.getLong("groepID");
+        Bundle bundle = getIntent().getExtras();
+        studentID = bundle.getLong("studentID");
+        groepID = bundle.getLong("groepID");
 
         Onderzoek onderzoek;
         onderzoek = db.getOnderzoek(groepID, onderdeelID);
@@ -70,9 +71,9 @@ public class Voormeting extends AppCompatActivity {
 
             int randomGetal = rnd.nextInt(20);
 
-//            if (!Arrays.asList(afbeeldingen).contains(String.valueOf(woorden.get(randomGetal).getWoordID()))) {
-//                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
-//            }
+            if (!Arrays.asList(afbeeldingen).contains(String.valueOf(woorden.get(randomGetal).getWoordID()))) {
+                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
+            }
 
             if (afbeeldingen.contains(String.valueOf(randomGetal))) {
                 afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
