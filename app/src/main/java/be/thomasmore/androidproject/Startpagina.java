@@ -23,6 +23,7 @@ public class Startpagina extends AppCompatActivity {
 
     private DatabaseHelper db;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +45,8 @@ public class Startpagina extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });*/
+
+        //button doorverwijzen
 
         final Button button = findViewById(R.id.buttonStart);
         button.setOnClickListener(new View.OnClickListener() {
