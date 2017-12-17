@@ -2,18 +2,13 @@ package be.thomasmore.androidproject;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
-import android.database.*;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -28,55 +23,41 @@ public class Startpagina extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_startpagina);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
 
         db = new DatabaseHelper(this);
         readGroepen();
 
-        Spinner spinner = (Spinner) findViewById(R.id.groepID);
-
-
-/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
-
-        //button doorverwijzen
-
         final Button button = findViewById(R.id.buttonStart);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Bundle bundle = new Bundle();
-                long studentID = 1;
-                EditText name = (EditText) findViewById(R.id.studentNaam);
 
-                bundle.putLong("studentID", studentID);
+                EditText name = (EditText) findViewById(R.id.studentNaam);
 
                 if (name.getText().toString().isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Vul je naam in!", Toast.LENGTH_SHORT).show();
                 } else {
-
-
                     EditText naamStudent = (EditText) findViewById(R.id.studentNaam);
                     String naam = naamStudent.getText().toString();
 
+                    Spinner groepen = (Spinner) findViewById(R.id.spinnerGroepen);
+                    Groep groep = new Groep();
+                    groep = (Groep) groepen.getSelectedItem();
+
                     Student student = new Student();
                     student.setNaam(naam);
+                    student.setGroepID(groep.getGroepID());
 
+                    long studentID = db.insertStudent(student);
 
-                    db.insertStudent(student);
+                    Bundle bundle = new Bundle();
+                    bundle.putLong("studentID", studentID);
+                    Intent i = new Intent(Startpagina.this, Voormeting.class);
+                    i.putExtras(bundle);
+
+                    startActivity(i);
                 }
-                Intent i = new Intent(Startpagina.this, Voormeting.class);
-                i.putExtras(bundle);
-
-                startActivity(i);
-
-                //startActivityForResult(i, 1);
             }
 
         });
@@ -87,7 +68,7 @@ public class Startpagina extends AppCompatActivity {
 
         ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, android.R.layout.simple_spinner_item, groepen);
 
-        final Spinner groepenSpinner = (Spinner) findViewById(R.id.groepID);
+        final Spinner groepenSpinner = (Spinner) findViewById(R.id.spinnerGroepen);
         groepenSpinner.setAdapter(adapter);
     }
 

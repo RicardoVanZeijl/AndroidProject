@@ -23,14 +23,11 @@ public class Voormeting extends AppCompatActivity {
 
     List<Woord> woorden;
 
-    //Testgegevens, wordt meegegeven met bundle
-    long studentID = 1;
-    long groepID = 1;
-
+    long studentID;
     long onderdeelID = 1;
 
-    int index;
-    int score;
+    int index = 0;
+    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,21 +36,18 @@ public class Voormeting extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
 
-//        Bundle bundle = getIntent().getExtras();
-//        studentID = bundle.getLong("studentID");
-//        groepID = bundle.getLong("groepID");
+        Bundle bundle = getIntent().getExtras();
+        studentID = bundle.getLong("studentID");
+
+        Student student = db.getStudent(studentID);
 
         Onderzoek onderzoek;
-        onderzoek = db.getOnderzoek(groepID, onderdeelID);
+        onderzoek = db.getOnderzoek(student.getGroepID(), onderdeelID);
 
         long lijstID = onderzoek.getLijstID();
 
         woorden = db.getWoordenFromLijst(lijstID);
         Collections.shuffle(woorden);
-
-        index = 0;
-
-        score = 0;
 
         volgendWoord();
     }
@@ -70,14 +64,12 @@ public class Voormeting extends AppCompatActivity {
 
         for (int i=0; i<3; i++) {
 
-            int randomGetal = rnd.nextInt(20);
-
-//            if (!Arrays.asList(afbeeldingen).contains(String.valueOf(woorden.get(randomGetal).getWoordID()))) {
-//                afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoordID()));
-//            }
+            int randomGetal = rnd.nextInt(woorden.size());
 
             if (!afbeeldingen.contains(String.valueOf(woorden.get(randomGetal).getWoord().toLowerCase()))) {
                 afbeeldingen.add(String.valueOf(woorden.get(randomGetal).getWoord().toLowerCase()));
+            } else {
+                i-=1;
             }
         }
 
@@ -85,37 +77,15 @@ public class Voormeting extends AppCompatActivity {
 
         for (int i=0; i < afbeeldingen.size(); i++) {
             ImageView image = findViewById(getResources().getIdentifier(("randomAfbeelding" + i), "id", getPackageName()));
-            image.setImageResource(getResources().getIdentifier(afbeeldingen.get(i), "drawable", getPackageName()));
-            //Verkeerde tag wordt meegegeven
-            //image.setTag(woorden.get(index).getWoordID());
+            image.setImageResource(getResources().getIdentifier((afbeeldingen.get(i)+0), "drawable", getPackageName()));
             image.setTag(afbeeldingen.get(i).toLowerCase());
         }
 
-        if (index<20) {
-            index++;
-        } else {
-            Bundle bundle = new Bundle();
-            bundle.putLong("studentID", studentID);
-            bundle.putLong("groepID", groepID);
-            Intent intent = new Intent(this, Preteaching.class  );
-            intent.putExtras(bundle);
-            startActivity(intent);
-        }
+
     }
 
     public void onClickRandomAfbeelding(View view) {
         ImageView image = (ImageView) view;
-
-//        if (Integer.parseInt(image.getTag().toString()) == woorden.get(index).getWoordID()){
-//            score+=1;
-//        } else {
-//            Fout fout = new Fout();
-//            fout.setStudentID(studentID);
-//            fout.setOnderdeelID(onderdeelID);
-//            fout.setWoordID(woorden.get(index).getWoordID());
-//
-//            db.insertFout(fout);
-//        }
 
         if (image.getTag().toString().equalsIgnoreCase(woorden.get(index).getWoord())){
             score+=1;
@@ -128,6 +98,17 @@ public class Voormeting extends AppCompatActivity {
             db.insertFout(fout);
         }
 
-        volgendWoord();
+        if (index<woorden.size()) {
+            index++;
+            volgendWoord();
+        } else {
+            Bundle bundle = new Bundle();
+            bundle.putLong("studentID", studentID);
+            Intent intent = new Intent(this, Preteaching.class  );
+            intent.putExtras(bundle);
+            startActivity(intent);
+        }
+
+
     }
 }

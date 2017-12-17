@@ -31,13 +31,6 @@
         <activity
             android:name=".Voormeting"
             android:label="@string/title_activity_voormeting"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
-        <!-- Training -->
-        <activity
-            android:name=".Training"
-            android:label="@string/title_activity_training"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <!-- Preteaching -->
@@ -45,6 +38,12 @@
             android:name=".Preteaching"
             android:label="@string/title_activity_preteaching"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- Training -->
+        <activity
+            android:name=".Training"
+            android:label="@string/title_activity_training"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
