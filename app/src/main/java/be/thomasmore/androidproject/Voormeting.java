@@ -27,12 +27,19 @@ public class Voormeting extends AppCompatActivity {
     long onderdeelID = 1;
 
     int index = 0;
-    int score = 0;
+    int punten = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voormeting);
+
+//        if (savedInstanceState != null) {
+//            index = savedInstanceState.getInt("index");
+//            punten = savedInstanceState.getInt("punten");
+//        } else {
+//
+//        }
 
         db = new DatabaseHelper(this);
 
@@ -88,7 +95,7 @@ public class Voormeting extends AppCompatActivity {
         ImageView image = (ImageView) view;
 
         if (image.getTag().toString().equalsIgnoreCase(woorden.get(index).getWoord())){
-            score+=1;
+            punten+=1;
         } else {
             Fout fout = new Fout();
             fout.setStudentID(studentID);
@@ -98,17 +105,31 @@ public class Voormeting extends AppCompatActivity {
             db.insertFout(fout);
         }
 
-        if (index<woorden.size()) {
+        if (index<woorden.size()-1) {
             index++;
             volgendWoord();
         } else {
+            Score score = new Score();
+            score.setStudentID(studentID);
+            score.setOnderdeelID(onderdeelID);
+            score.setScore(punten + "/" + woorden.size());
+            score.setTijd("0");
+
+            db.insertScore(score);
+
             Bundle bundle = new Bundle();
             bundle.putLong("studentID", studentID);
             Intent intent = new Intent(this, Preteaching.class  );
             intent.putExtras(bundle);
             startActivity(intent);
         }
-
-
     }
+
+//    @Override
+//    public void onSaveInstanceState(Bundle outState)
+//    {
+//        outState.putInt("index", index);
+//        outState.putInt("punten", punten);
+//        super.onSaveInstanceState(outState);
+//    }
 }

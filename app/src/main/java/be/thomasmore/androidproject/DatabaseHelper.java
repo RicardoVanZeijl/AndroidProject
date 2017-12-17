@@ -350,6 +350,21 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return id;
     }
 
+    public long insertScore(Score score) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put("studentID", score.getStudentID());
+        values.put("onderdeelID", score.getOnderdeelID());
+        values.put("score", score.getScore());
+        values.put("tijd", score.getTijd());
+
+        long id = db.insert("score", null, values);
+
+        db.close();
+        return id;
+    }
+
     //Read
     public Student getStudent(long studentID) {
         String selectQuery = "SELECT * FROM student WHERE studentID = " + studentID + "";
