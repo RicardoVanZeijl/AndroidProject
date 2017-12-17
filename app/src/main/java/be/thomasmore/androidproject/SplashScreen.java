@@ -6,7 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by larsg on 4/12/2017.
+ * Created by larsg.
  *
  */
 

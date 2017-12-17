@@ -14,6 +14,11 @@ import android.widget.Toast;
 
 import java.util.List;
 
+/**
+ * Created by larsg.
+ *
+ */
+
 public class Startpagina extends AppCompatActivity {
 
     private DatabaseHelper db;

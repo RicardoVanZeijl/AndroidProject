@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 /**
- * Created by Ricardo van Zeijl on 16/12/2017.
+ * Created by Ricardo van Zeijl.
  *
  */
 
