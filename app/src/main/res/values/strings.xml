@@ -13,5 +13,12 @@
     <string name="preteachingtekst">Preteachingtekst</string>
     <string name="preteachingtekstTom">Preteachingtekst van Tom</string>
     <string name="preteachingplaat">Preteachingplaat</string>
+    <string name="startAvontuur">Start avontuur</string>
+    <string name="title_activity_conditie1_oefening1">Conditie1Oefening1</string>
+    <string name="title_activity_conditie1_oefening2">Conditie1Oefening2</string>
+    <string name="title_activity_conditie1_oefening3">Conditie1Oefening3</string>
+    <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
+    <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
+    <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
 
 </resources>

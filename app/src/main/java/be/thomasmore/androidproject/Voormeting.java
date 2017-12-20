@@ -2,14 +2,18 @@ package be.thomasmore.androidproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 /**
@@ -18,6 +22,8 @@ import java.util.Random;
  */
 
 public class Voormeting extends AppCompatActivity {
+
+    TextToSpeech tts;
 
     private DatabaseHelper db;
 
@@ -40,6 +46,26 @@ public class Voormeting extends AppCompatActivity {
 //        } else {
 //
 //        }
+
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    tts.setLanguage(new Locale("NL"));
+                }
+            }
+        });
+
+        final ImageButton ib = findViewById(R.id.textToSpeech);
+        ib.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                TextView woord = findViewById(R.id.randomWoord);
+                String toSpeak = woord.getText().toString();
+                Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+                tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
 
         db = new DatabaseHelper(this);
 
@@ -88,7 +114,9 @@ public class Voormeting extends AppCompatActivity {
             image.setTag(afbeeldingen.get(i).toLowerCase());
         }
 
-
+        String toSpeak = woord.getText().toString();
+        Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
+        tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     public void onClickRandomAfbeelding(View view) {
@@ -123,6 +151,14 @@ public class Voormeting extends AppCompatActivity {
             intent.putExtras(bundle);
             startActivity(intent);
         }
+    }
+
+    public void onPause(){
+        if(tts !=null){
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onPause();
     }
 
 //    @Override

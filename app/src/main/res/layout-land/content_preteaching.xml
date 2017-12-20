@@ -38,6 +38,15 @@
             android:layout_margin="8dp"
             android:contentDescription="@string/preteachingplaat"
             android:src="@drawable/preteachingplaat" />
+
+        <Button
+            android:id="@+id/startAvontuur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/preteachingplaat"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickStartAvontuur"/>
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

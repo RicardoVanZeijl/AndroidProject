@@ -27,13 +27,12 @@
                 android:text="@string/randomWord"
                 android:textSize="21sp" />
 
-            <!--<ImageButton-->
-            <!--android:id="@+id/TTS"-->
-            <!--android:layout_width="21dp"-->
-            <!--android:layout_height="21dp"-->
-            <!--android:layout_toRightOf="@+id/randomWoord"-->
-            <!--android:background="@drawable/texttospeech"-->
-            <!--android:onClick="onClickTTS" />-->
+            <ImageButton
+            android:id="@+id/textToSpeech"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_toRightOf="@+id/randomWoord"
+            android:background="@drawable/texttospeech" />
 
             <ImageView
                 android:id="@+id/randomAfbeelding0"

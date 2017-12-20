@@ -247,6 +247,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.execSQL("INSERT INTO woordenlijst (woordenlijstID, lijstID, woordID) VALUES (10, 1, 10);");
     }
 
+    private void insertScores(SQLiteDatabase db) {
+        db.execSQL("INSERT INTO score (scoreID, studentID, onderdeelID, score, tijd) VALUES (1, 1, 1, '9/10', '59');");
+        db.execSQL("INSERT INTO score (scoreID, studentID, onderdeelID, score, tijd) VALUES (1, 1, 1, '53/60', '360');");
+        db.execSQL("INSERT INTO score (scoreID, studentID, onderdeelID, score, tijd) VALUES (1, 1, 1, '10/10', '45');");
+    }
+
     private void insertSymantischeWebben(SQLiteDatabase db) {
         db.execSQL("INSERT INTO symantischweb (symantischWebID, woordID, keuzeID, juist) VALUES (1, 1, 1, 1);");
         db.execSQL("INSERT INTO symantischweb (symantischWebID, woordID, keuzeID, juist) VALUES (2, 1, 2, 1);");
