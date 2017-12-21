@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Conditie1Oefening1"
+    tools:showIn="@layout/activity_conditie1_oefening1">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+            <ImageView
+                android:id="@+id/randomAfbeelding"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/randomImage"
+                android:src="@drawable/randomimage" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="50">
+
+                <!--<ImageView-->
+                <!--android:id="@+id/randomAfbeeldingFullscreen"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_margin="8dp"-->
+                <!--android:contentDescription="@string/randomImage"-->
+                <!--android:src="@drawable/randomimage" />-->
+
+                <ImageView
+                    android:id="@+id/afbeeldingTom"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/afbeeldingTom"
+                    android:src="@drawable/afbeeldingtom" />
+
+                <TextView
+                    android:id="@+id/tekstTom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/afbeeldingTom"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/tekstTom"
+                    android:textSize="21sp" />
+
+                <Button
+                    android:id="@+id/volgendeOefening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tekstTom"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="onClickVolgendeOefening"
+                    android:text="@string/startAvontuur" />
+
+            </RelativeLayout>
+        </TableRow>
+    </TableLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

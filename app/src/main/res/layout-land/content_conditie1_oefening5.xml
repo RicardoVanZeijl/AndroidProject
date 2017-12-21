@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Conditie1Oefening5"
+    tools:showIn="@layout/activity_conditie1_oefening5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:id="@+id/tabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="80"
+            android:weightSum="100">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/afbeeldingTom"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/afbeeldingTom"
+                    android:src="@drawable/afbeeldingtom" />
+
+                <TextView
+                    android:id="@+id/tekstTom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/tekstTom"
+                    android:textSize="21sp" />
+
+            </TableRow>
+
+            <TableRow>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="20">
+
+                    <ImageView
+                        android:id="@+id/randomAfbeelding"
+                        android:layout_width="150dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/randomimage"
+                        android:contentDescription="@string/randomImage" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+                    <ImageView
+                        android:id="@+id/keuzeAfbeelding0"
+                        android:layout_width="125dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/randomimage"
+                        android:contentDescription="@string/randomImage" />
+
+                    <ImageView
+                        android:id="@+id/keuzeAfbeelding1"
+                        android:layout_width="125dp"
+                        android:layout_height="75dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/randomimage"
+                        android:contentDescription="@string/randomImage" />
+
+                    <ImageView
+                        android:id="@+id/keuzeAfbeelding2"
+                        android:layout_width="125dp"
+                        android:layout_height="75dp"
+                        android:layout_below="@id/keuzeAfbeelding1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/randomimage"
+                        android:contentDescription="@string/randomImage" />
+
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="20">
+
+            <ImageView
+                android:id="@+id/randomKeuzeAfbeelding0"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_margin="8dp"
+                android:background="@drawable/randomimage"
+                android:contentDescription="@string/randomImage" />
+
+            <ImageView
+                android:id="@+id/randomKeuzeAfbeelding1"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/randomKeuzeAfbeelding0"
+                android:layout_margin="8dp"
+                android:background="@drawable/randomimage"
+                android:contentDescription="@string/randomImage" />
+
+            <ImageView
+                android:id="@+id/randomKeuzeAfbeelding2"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/randomKeuzeAfbeelding1"
+                android:layout_margin="8dp"
+                android:background="@drawable/randomimage"
+                android:contentDescription="@string/randomImage" />
+
+            <ImageView
+                android:id="@+id/randomKeuzeAfbeelding3"
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/randomKeuzeAfbeelding2"
+                android:layout_margin="8dp"
+                android:background="@drawable/randomimage"
+                android:contentDescription="@string/randomImage" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -8,6 +8,9 @@
     tools:context="be.thomasmore.androidproject.Conditie1Oefening1"
     tools:showIn="@layout/activity_conditie1_oefening1">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/randomAfbeelding"
         android:layout_width="match_parent"
@@ -34,5 +37,7 @@
         android:layout_below="@id/preteachingplaat"
         android:layout_centerHorizontal="true"
         android:onClick="onClickVolgendeOefening"/>
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

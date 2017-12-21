@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Conditie1Oefening4"
+    tools:showIn="@layout/activity_conditie1_oefening4">
+
+        <TableLayout
+            android:id="@+id/tabel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/afbeeldingTom"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/afbeeldingTom"
+                    android:src="@drawable/afbeeldingtom" />
+
+                <TextView
+                    android:id="@+id/tekstTom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/tekstTom"
+                    android:textSize="21sp" />
+            </TableRow>
+
+            <TableRow>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="80">
+
+                    <TextView
+                        android:id="@+id/keuze0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        android:background="@color/colorLightBlue"
+                        />
+
+                    <TextView
+                        android:id="@+id/keuze1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        android:background="@color/colorLightBlue"
+                        />
+
+                    <TextView
+                        android:id="@+id/keuze2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="8dp"
+                        android:padding="8dp"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        android:background="@color/colorLightBlue"
+                        />
+
+                    <TextView
+                        android:id="@+id/randomWoord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="21sp"
+                        android:text="@string/randomWord"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/randomKeuze0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        />
+
+                    <TextView
+                        android:id="@+id/randomKeuze1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_below="@+id/randomKeuze0"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        />
+
+                    <TextView
+                        android:id="@+id/randomKeuze2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_below="@+id/randomKeuze1"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        />
+
+                    <TextView
+                        android:id="@+id/randomKeuze3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_below="@+id/randomKeuze2"
+                        android:textSize="21sp"
+                        android:text="@string/randomKeuze"
+                        />
+
+                </RelativeLayout>
+            </TableRow>
+        </TableLayout>
+
+</android.support.constraint.ConstraintLayout>

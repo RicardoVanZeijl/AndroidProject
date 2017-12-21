@@ -15,7 +15,8 @@
         <activity
             android:name=".SplashScreen"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,51 +28,64 @@
         <activity
             android:name=".Startpagina"
             android:label="@string/title_activity_startpagina"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
 
         <!-- Voormeting -->
         <activity
             android:name=".Voormeting"
             android:label="@string/title_activity_voormeting"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
 
         <!-- Preteaching -->
         <activity
             android:name=".Preteaching"
             android:label="@string/title_activity_preteaching"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
 
         <!-- Training -->
         <activity
             android:name=".Training"
             android:label="@string/title_activity_training"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
 
-        <!-- Conditie 1 Oefening 1 -->
+        <!-- Conditie 1 Oefening 1 & Oefening2 -->
         <activity
             android:name=".Conditie1Oefening1"
             android:label="@string/title_activity_conditie1_oefening1"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Conditie1Oefening2"
-            android:label="@string/title_activity_conditie1_oefening2"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
+
+
         <activity
             android:name=".Conditie1Oefening3"
             android:label="@string/title_activity_conditie1_oefening3"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
+
+
         <activity
             android:name=".Conditie1Oefening4"
             android:label="@string/title_activity_conditie1_oefening4"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
+
+
         <activity
             android:name=".Conditie1Oefening5"
             android:label="@string/title_activity_conditie1_oefening5"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
+
+
         <activity
             android:name=".Conditie1Oefening6"
             android:label="@string/title_activity_conditie1_oefening6"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

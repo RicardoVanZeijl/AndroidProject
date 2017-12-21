@@ -6,6 +6,12 @@
     <string name="title_activity_voormeting">Voormeting</string>
     <string name="title_activity_preteaching">Preteaching</string>
     <string name="title_activity_training">Training</string>
+    <string name="title_activity_conditie1_oefening1">Conditie1Oefening1</string>
+    <string name="title_activity_conditie1_oefening2">Conditie1Oefening2</string>
+    <string name="title_activity_conditie1_oefening3">Conditie1Oefening3</string>
+    <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
+    <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
+    <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
 
     <!--Custom Resources-->
     <string name="randomWord">Random Woord</string>
@@ -14,11 +20,25 @@
     <string name="preteachingtekstTom">Preteachingtekst van Tom</string>
     <string name="preteachingplaat">Preteachingplaat</string>
     <string name="startAvontuur">Start avontuur</string>
-    <string name="title_activity_conditie1_oefening1">Conditie1Oefening1</string>
-    <string name="title_activity_conditie1_oefening2">Conditie1Oefening2</string>
-    <string name="title_activity_conditie1_oefening3">Conditie1Oefening3</string>
-    <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
-    <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
-    <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
+    <string name="afbeeldingTom">Afbeelding van Tom</string>
+    <string name="tekstTom">Tekst van Tom</string>
+    <string name="volgendeOefening">Volgende oefening</string>
+    <string name="contextzin">Contextzin</string>
+    <string name="afbeeldingJuist">Juist</string>
+    <string name="afbeeldingFout">Fout</string>
+    <string name="randomKeuze">Random Keuze</string>
+
+    <string name="afbeeldingLeuk">Leuk</string>
+    <string name="tekstLeuk">Leuk</string>
+
+    <string name="afbeeldingInteressant">Interessant</string>
+    <string name="tekstInteressant">Interessant</string>
+
+    <string name="afbeeldingGrappig">Grappig</string>
+    <string name="tekstGrappig">Grappig</string>
+
+    <string name="afbeeldingMooi">Mooi</string>
+    <string name="tekstMooi">Mooi</string>
+
 
 </resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Conditie1Oefening6"
+    tools:showIn="@layout/activity_conditie1_oefening6">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintBottom_creator="1"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="8dp"
+        tools:layout_constraintLeft_creator="1"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <TableLayout
+            android:id="@+id/tabel1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/afbeeldingTom"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/afbeeldingTom"
+                    android:src="@drawable/afbeeldingtom" />
+
+                <TextView
+                    android:id="@+id/tekstTom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|left"
+                    android:text="@string/tekstTom"
+                    android:textSize="21sp" />
+
+            </TableRow>
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tabel1">
+
+            <TableRow>
+                <ImageView
+                    android:id="@+id/afbeeldingLeuk"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/afbeeldingleuk"
+                    android:contentDescription="@string/afbeeldingLeuk" />
+
+                <ImageView
+                    android:id="@+id/afbeeldingInteressant"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/afbeeldinginteressant"
+                    android:contentDescription="@string/afbeeldingInteressant" />
+
+                <ImageView
+                    android:id="@+id/afbeeldingGrappig"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/afbeeldinggrappig"
+                    android:contentDescription="@string/afbeeldingGrappig" />
+
+                <ImageView
+                    android:id="@+id/afbeeldingMooi"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/afbeeldingmooi"
+                    android:contentDescription="@string/afbeeldingMooi" />
+
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tekstLeuk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/tekstLeuk"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tekstInteressant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/tekstInteressant"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tekstGrappig"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/tekstGrappig"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/tekstMooi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="@string/tekstMooi"
+                    android:textSize="17sp" />
+            </TableRow>
+
+        </TableLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
