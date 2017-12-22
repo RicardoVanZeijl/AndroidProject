@@ -92,6 +92,10 @@
         <activity
             android:name=".Nameting"
             android:label="@string/title_activity_nameting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AdminSymantischWeb"
+            android:label="@string/title_activity_admin_symantisch_web"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

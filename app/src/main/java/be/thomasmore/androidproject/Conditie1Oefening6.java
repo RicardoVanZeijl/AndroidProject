@@ -1,8 +1,10 @@
 package be.thomasmore.androidproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -62,4 +64,11 @@ public class Conditie1Oefening6 extends AppCompatActivity {
         tom.append(woord.getWoord() + ". Wat een leuk woord is " + woord.getWoord() + " toch? Wat vind jij van het woord  '" + woord.getWoord() +"'?");
     }
 
+    public void onClickStartNameting(View view) {
+        Bundle bundle = new Bundle();
+        bundle.putLong("studentID", studentID);
+        Intent intent = new Intent(this, Nameting.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }

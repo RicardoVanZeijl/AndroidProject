@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="be.thomasmore.androidproject.Nameting">
+    tools:context="be.thomasmore.androidproject.AdminSymantischWeb">
 
-    <include layout="@layout/content_nameting" />
+    <include layout="@layout/content_admin_symantisch_web" />
 
 </android.support.design.widget.CoordinatorLayout>

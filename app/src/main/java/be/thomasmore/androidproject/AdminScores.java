@@ -13,7 +13,8 @@ import java.util.List;
 
 
 /**
- * Created by larsg.
+ * Created by Lars Gijbels.
+ *
  */
 
 public class AdminScores extends AppCompatActivity {

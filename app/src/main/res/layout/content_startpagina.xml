@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Startpagina"
     tools:showIn="@layout/activity_startpagina">
 
     <android.support.v7.widget.Toolbar
@@ -15,71 +15,56 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/ThemeOverlay.AppCompat.ActionBar" />
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TableRow>
+        <TableLayout
+            android:id="@+id/tabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
 
-            <TextView />
+            <TableRow>
+                <TextView
+                    android:id="@+id/tekstNaam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/tekstNaam"
+                    android:textSize="21sp" />
 
-            <TextView />
-        </TableRow>
+                <EditText
+                    android:id="@+id/studentNaam"
+                    android:inputType="textPersonName"
+                    android:maxLength="21" />
+            </TableRow>
 
-        <TableRow>
+            <TableRow>
+                <TextView
+                    android:id="@+id/tekstGroep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/tekstGroep"
+                    android:textSize="21sp" />
 
-            <TextView />
+                <android.support.v7.widget.AppCompatSpinner android:id="@+id/spinnerGroepen"></android.support.v7.widget.AppCompatSpinner>
 
-            <TextView />
-        </TableRow>
+            </TableRow>
 
-        <TableRow>
+        </TableLayout>
 
-            <TextView />
+        <Button
+            android:id="@+id/startOnderzoek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabel"
+            android:layout_centerHorizontal="true"
+            android:text="@string/knopStartOnderzoek"
+            android:onClick="onClickStartOnderzoek"/>
 
-            <TextView />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView
-                android:id="@+id/textNaam"
-                android:text="Naam:" />
-
-            <EditText
-                android:id="@+id/studentNaam"
-                android:inputType="textPersonName" />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView />
-
-            <TextView />
-        </TableRow>
-        <TableRow>
-
-            <TextView
-                android:id="@+id/textgroep"
-                android:text="Groep:" />
-
-            <android.support.v7.widget.AppCompatSpinner android:id="@+id/spinnerGroepen"></android.support.v7.widget.AppCompatSpinner>
-        </TableRow>
-        <TableRow>
-            <TextView />
-
-            <TextView />
-        </TableRow>
-
-        <TableRow>
-
-            <TextView />
-
-            <Button
-                android:id="@+id/buttonStart"
-                android:text="Start"
-                android:onClick="buttonStart" />
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

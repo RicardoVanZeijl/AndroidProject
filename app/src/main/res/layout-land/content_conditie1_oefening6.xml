@@ -27,7 +27,7 @@
         android:layout_marginRight="8dp">
 
         <TableLayout
-            android:id="@+id/tabel1"
+            android:id="@+id/tabel0"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:weightSum="100">
@@ -55,10 +55,11 @@
         </TableLayout>
 
         <TableLayout
+            android:id="@+id/tabel1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_below="@+id/tabel1">
+            android:layout_below="@+id/tabel0">
 
             <TableRow>
                 <ImageView
@@ -130,6 +131,15 @@
             </TableRow>
 
         </TableLayout>
+
+        <Button
+            android:id="@+id/knopStartNameting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabel1"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickStartNameting"
+            android:text="@string/knopStartNameting" />
 
     </RelativeLayout>
 
