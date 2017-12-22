@@ -58,7 +58,7 @@
                     android:layout_below="@+id/afbeeldingTom"
                     android:layout_centerHorizontal="true"
                     android:text="@string/tekstTom"
-                    android:textSize="19sp" />
+                    android:textSize="15sp" />
 
                 <Button
                     android:id="@+id/volgendeOefening"

@@ -11,7 +11,8 @@
         <TableLayout
             android:id="@+id/tabel"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:weightSum="100">
 
             <TableRow>
                 <ImageView
@@ -20,7 +21,8 @@
                     android:layout_height="100dp"
                     android:layout_margin="8dp"
                     android:contentDescription="@string/afbeeldingTom"
-                    android:src="@drawable/afbeeldingtom" />
+                    android:src="@drawable/afbeeldingtom"
+                    android:layout_weight="20"/>
 
                 <TextView
                     android:id="@+id/tekstTom"
@@ -28,7 +30,8 @@
                     android:layout_height="match_parent"
                     android:gravity="center_vertical|left"
                     android:text="@string/tekstTom"
-                    android:textSize="21sp" />
+                    android:textSize="15sp"
+                    android:layout_weight="80"/>
             </TableRow>
 
             <TableRow>
@@ -129,6 +132,15 @@
                         android:textSize="21sp"
                         android:text="@string/randomKeuze"
                         />
+
+                    <Button
+                        android:id="@+id/volgendeOefening"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/randomKeuze3"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="onClickVolgendeOefening"
+                        android:text="@string/volgendeOefening" />
 
                 </RelativeLayout>
             </TableRow>

@@ -57,7 +57,7 @@ public class AdminOnderdelen extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menu_scores:
-                Intent i = new Intent(this, AdminPunten.class);
+                Intent i = new Intent(this, AdminScores.class);
                 startActivity(i);
                 return true;
             case R.id.menu_fouten:

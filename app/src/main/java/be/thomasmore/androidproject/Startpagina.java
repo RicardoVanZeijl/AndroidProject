@@ -3,16 +3,14 @@ package be.thomasmore.androidproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
-
 
 import java.util.List;
 
@@ -36,49 +34,6 @@ public class Startpagina extends AppCompatActivity {
 
         db = new DatabaseHelper(this);
         readGroepen();
-
-        final Button button = findViewById(R.id.buttonStart);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                EditText name = (EditText) findViewById(R.id.studentNaam);
-
-                if (name.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Vul je naam in!", Toast.LENGTH_SHORT).show();
-                } else {
-                    EditText naamStudent = (EditText) findViewById(R.id.studentNaam);
-                    String naam = naamStudent.getText().toString();
-
-                    Spinner groepen = (Spinner) findViewById(R.id.spinnerGroepen);
-                    Groep groep = new Groep();
-                    groep = (Groep) groepen.getSelectedItem();
-
-                    Student student = new Student();
-                    student.setNaam(naam);
-                    student.setGroepID(groep.getGroepID());
-
-                    long studentID = db.insertStudent(student);
-
-                    Bundle bundle = new Bundle();
-                    bundle.putLong("studentID", studentID);
-                    Intent i = new Intent(Startpagina.this, Voormeting.class);
-                    i.putExtras(bundle);
-
-                    startActivity(i);
-                }
-            }
-
-        });
-    }
-
-
-    private void readGroepen() {
-        final List<Groep> groepen = db.getGroepen();
-
-        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, android.R.layout.simple_spinner_item, groepen);
-
-        final Spinner groepenSpinner = (Spinner) findViewById(R.id.spinnerGroepen);
-        groepenSpinner.setAdapter(adapter);
     }
 
     @Override
@@ -96,7 +51,7 @@ public class Startpagina extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menu_scores:
-                Intent i = new Intent(this, AdminPunten.class);
+                Intent i = new Intent(this, AdminScores.class);
                 startActivity(i);
                 return true;
             case R.id.menu_fouten:
@@ -136,6 +91,43 @@ public class Startpagina extends AppCompatActivity {
                 return true;
             default:
                 return false;
+        }
+    }
+
+    private void readGroepen() {
+        final List<Groep> groepen = db.getGroepen();
+
+        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, android.R.layout.simple_spinner_item, groepen);
+
+        final Spinner groepenSpinner = (Spinner) findViewById(R.id.spinnerGroepen);
+        groepenSpinner.setAdapter(adapter);
+    }
+
+    public void onClickStartOnderzoek(View view) {
+        EditText name = (EditText) findViewById(R.id.studentNaam);
+
+        if (name.getText().toString().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Vul je naam in!", Toast.LENGTH_SHORT).show();
+        } else {
+            EditText naamStudent = (EditText) findViewById(R.id.studentNaam);
+            String naam = naamStudent.getText().toString();
+
+            Spinner groepen = (Spinner) findViewById(R.id.spinnerGroepen);
+            Groep groep = new Groep();
+            groep = (Groep) groepen.getSelectedItem();
+
+            Student student = new Student();
+            student.setNaam(naam);
+            student.setGroepID(groep.getGroepID());
+
+            long studentID = db.insertStudent(student);
+
+            Bundle bundle = new Bundle();
+            bundle.putLong("studentID", studentID);
+            Intent i = new Intent(Startpagina.this, Voormeting.class);
+            i.putExtras(bundle);
+
+            startActivity(i);
         }
     }
 }

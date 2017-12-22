@@ -84,7 +84,7 @@ public class Conditie1Oefening3 extends AppCompatActivity {
         if (contextzin.getText().equals(contextzinnen.get(1))) {
             Bundle bundle = new Bundle();
             bundle.putLong("studentID", studentID);
-            bundle.putLong("index", index);
+            bundle.putInt("index", index);
             bundle.putLongArray("woordIDs", woordIDs);
             Intent intent = new Intent(this, Conditie1Oefening4.class);
             intent.putExtras(bundle);

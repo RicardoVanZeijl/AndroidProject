@@ -1,8 +1,10 @@
 package be.thomasmore.androidproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.List;
@@ -46,6 +48,9 @@ public class Conditie1Oefening4 extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         studentID = bundle.getLong("studentID");
         woordIDs = bundle.getLongArray("woordIDs");
+        index = bundle.getInt("index");
+
+        db = new DatabaseHelper(this);
 
         woord = db.getWoord(woordIDs[index]);
 
@@ -65,4 +70,13 @@ public class Conditie1Oefening4 extends AppCompatActivity {
         tts.speak(toSpeak, TextToSpeech.QUEUE_ADD, null);
     }
 
+    public void onClickVolgendeOefening(View view) {
+        Bundle bundle = new Bundle();
+        bundle.putLong("studentID", studentID);
+        bundle.putInt("index", index);
+        bundle.putLongArray("woordIDs", woordIDs);
+        Intent intent = new Intent(this, Conditie1Oefening5.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
+    }
 }

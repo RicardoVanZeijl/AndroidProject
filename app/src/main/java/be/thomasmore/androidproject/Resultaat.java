@@ -3,6 +3,11 @@ package be.thomasmore.androidproject;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+/**
+ * Created by Ricardo van Zeijl.
+ *
+ */
+
 public class Resultaat extends AppCompatActivity {
 
     private DatabaseHelper db;

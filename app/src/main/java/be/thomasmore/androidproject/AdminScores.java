@@ -16,14 +16,14 @@ import java.util.List;
  * Created by larsg on 19/12/2017.
  */
 
-public class AdminPunten extends AppCompatActivity {
+public class AdminScores extends AppCompatActivity {
 
     private DatabaseHelper db;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_punten);
+        setContentView(R.layout.activity_admin_scores);
 
         Toolbar toolbarAdmin = findViewById(R.id.toolbar);
         setSupportActionBar(toolbarAdmin);
@@ -60,7 +60,7 @@ public class AdminPunten extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menu_scores:
-                Intent i = new Intent(this, AdminPunten.class);
+                Intent i = new Intent(this, AdminScores.class);
                 startActivity(i);
                 return true;
             case R.id.menu_fouten:

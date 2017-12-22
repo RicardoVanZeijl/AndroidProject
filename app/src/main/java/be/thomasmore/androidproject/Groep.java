@@ -2,6 +2,7 @@ package be.thomasmore.androidproject;
 
 /**
  * Created by Ricardo van Zeijl.
+ *
  */
 
 public class Groep {

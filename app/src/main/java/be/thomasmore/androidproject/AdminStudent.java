@@ -4,13 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -75,7 +73,7 @@ public class AdminStudent extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             case R.id.menu_scores:
-                Intent i = new Intent(this, AdminPunten.class);
+                Intent i = new Intent(this, AdminScores.class);
                 startActivity(i);
                 return true;
             case R.id.menu_fouten:

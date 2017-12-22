@@ -5,16 +5,23 @@
     <string name="title_activity_startpagina">Startpagina</string>
     <string name="title_activity_voormeting">Voormeting</string>
     <string name="title_activity_preteaching">Preteaching</string>
-    <string name="title_activity_training">Training</string>
     <string name="title_activity_conditie1_oefening1">Conditie1Oefening1</string>
     <string name="title_activity_conditie1_oefening2">Conditie1Oefening2</string>
     <string name="title_activity_conditie1_oefening3">Conditie1Oefening3</string>
     <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
     <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
     <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
+    <string name="title_activity_nameting">Nameting</string>
     <string name="title_activity_resultaat">Resultaat</string>
 
     <!--Custom Resources-->
+    <string name="afbeeldingSplashScreen">Naam:</string>
+    <string name="tekstSplashScreen">Project 2 Groep 2</string>
+
+    <string name="tekstNaam">Naam:</string>
+    <string name="tekstGroep">Groep:</string>
+    <string name="knopStartOnderzoek">Start onderzoek</string>
+
     <string name="randomWord">Random Woord</string>
     <string name="randomImage">Random Afbeelding</string>
 
@@ -46,7 +53,9 @@
     <string name="tekstStudentScore">10/10</string>
     <string name="tekstTijd">Tijd:</string>
     <string name="tekstStudentTijd">06:00</string>
+
     <string name="knopStartNieuwAvontuur">Start nieuw avontuur</string>
+
 
 
 </resources>

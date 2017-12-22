@@ -14,13 +14,11 @@
            android:text="Test tekst shizzel" />-->
 
     <ImageView
-        android:id="@+id/splashscreen"
-        android:layout_marginLeft="10pt"
-        android:layout_marginRight="10pt"
+        android:id="@+id/afbeeldingSplashScreen"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:src="@drawable/logo"
-        android:layout_gravity="center" />
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:src="@drawable/afbeeldingsplashscreen"/>
 
 
 </LinearLayout>

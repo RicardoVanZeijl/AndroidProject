@@ -20,7 +20,7 @@ import java.util.Random;
  *
  */
 
-public class Voormeting extends AppCompatActivity {
+public class Nameting extends AppCompatActivity {
 
     TextToSpeech tts;
 
@@ -29,7 +29,7 @@ public class Voormeting extends AppCompatActivity {
     List<Woord> woorden;
 
     long studentID;
-    long onderdeelID = 1;
+    long onderdeelID = 4;
 
     int index = 0;
     int punten = 0;
@@ -37,7 +37,7 @@ public class Voormeting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voormeting);
+        setContentView(R.layout.activity_nameting);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -137,9 +137,10 @@ public class Voormeting extends AppCompatActivity {
 
             Bundle bundle = new Bundle();
             bundle.putLong("studentID", studentID);
-            Intent intent = new Intent(this, Preteaching.class  );
+            Intent intent = new Intent(this, Resultaat.class  );
             intent.putExtras(bundle);
             startActivity(intent);
         }
     }
+
 }

@@ -85,8 +85,6 @@
 
         </TableLayout>
 
-
-
         <Button
             android:id="@+id/startNieuwAvontuur"
             android:layout_width="wrap_content"
