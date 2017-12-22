@@ -5,6 +5,8 @@ package be.thomasmore.androidproject;
  *
  */
 
+import java.util.List;
+
 public class Score {
     private long scoreID;
     private long studentID;

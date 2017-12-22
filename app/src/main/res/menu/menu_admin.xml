@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="be.thomasmore.androidproject.Startpagina">
+    <item
+        android:id="@+id/admin"
+        android:title="Admin">
+        <menu>
+            <item
+                android:id="@+id/menu_studenten_beheren"
+                android:title="Studenten Beheren" />
+            <item
+                android:id="@+id/menu_scores"
+                android:title="Scores" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/afsluiten"
+        android:title="Afsluiten" />
+</menu>

@@ -389,6 +389,28 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return student;
     }
 
+
+    public List<Score> getScores() {
+        List<Score> lijst = new ArrayList<>();
+
+        String selectQuery = "SELECT * FROM score";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Score score = new Score(cursor.getLong(0),
+                        cursor.getLong(1), cursor.getLong(2),
+                        cursor.getString(3), cursor.getString(4));
+                lijst.add(score);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
     public List<Groep> getGroepen() {
         List<Groep> lijst = new ArrayList<>();
 
