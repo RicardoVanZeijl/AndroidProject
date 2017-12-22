@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,13 +38,6 @@ public class Voormeting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voormeting);
 
-//        if (savedInstanceState != null) {
-//            index = savedInstanceState.getInt("index");
-//            punten = savedInstanceState.getInt("punten");
-//        } else {
-//
-//        }
-
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -56,16 +47,15 @@ public class Voormeting extends AppCompatActivity {
             }
         });
 
-        final ImageButton ib = findViewById(R.id.textToSpeech);
-        ib.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                TextView woord = findViewById(R.id.randomWoord);
-                String toSpeak = woord.getText().toString();
-                Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
-                tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
-            }
-        });
+//        final ImageButton ib = findViewById(R.id.textToSpeech);
+//        ib.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                TextView woord = findViewById(R.id.randomWoord);
+//                String toSpeak = woord.getText().toString();
+//                tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
+//            }
+//        });
 
         db = new DatabaseHelper(this);
 
@@ -115,7 +105,6 @@ public class Voormeting extends AppCompatActivity {
         }
 
         String toSpeak = woord.getText().toString();
-        Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
         tts.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
     }
 
@@ -152,20 +141,4 @@ public class Voormeting extends AppCompatActivity {
             startActivity(intent);
         }
     }
-
-    public void onPause(){
-        if(tts !=null){
-            tts.stop();
-            tts.shutdown();
-        }
-        super.onPause();
-    }
-
-//    @Override
-//    public void onSaveInstanceState(Bundle outState)
-//    {
-//        outState.putInt("index", index);
-//        outState.putInt("punten", punten);
-//        super.onSaveInstanceState(outState);
-//    }
 }

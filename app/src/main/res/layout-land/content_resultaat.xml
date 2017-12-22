@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="be.thomasmore.androidproject.Resultaat"
+    tools:showIn="@layout/activity_resultaat">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout
+            android:id="@+id/tabel0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <TableRow>
+            <ImageView
+                android:id="@+id/afbeeldingTom"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/afbeeldingTom"
+                android:src="@drawable/afbeeldingtom" />
+
+            <TextView
+                android:id="@+id/tekstTom"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:text="@string/tekstTom"
+                android:textSize="21sp" />
+
+        </TableRow>
+    </TableLayout>
+
+        <TableLayout
+            android:id="@+id/tabel1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tabel0"
+            android:layout_centerHorizontal="true">
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tekstScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/tekstScore"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/tekstStudentScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/tekstStudentScore"
+                    android:textSize="21sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/tekstTijd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:gravity="center_vertical|right"
+                    android:text="@string/tekstTijd"
+                    android:textSize="21sp" />
+
+                <TextView
+                    android:id="@+id/tekstStudentTijd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/tekstStudentTijd"
+                    android:textSize="21sp" />
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+        <Button
+            android:id="@+id/startNieuwAvontuur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabel1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/knopStartNieuwAvontuur" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -52,12 +52,12 @@
         </TableLayout>
 
         <TextView
-            android:id="@+id/contextzin"
+            android:id="@+id/tekstContextzin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tabel"
             android:layout_centerHorizontal="true"
-            android:text="@string/contextzin"
+            android:text="@string/tekstContextzin"
             android:textSize="21sp" />
 
         <TableLayout
@@ -73,8 +73,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_margin="8dp"
+                    android:tag="0"
                     android:contentDescription="@string/afbeeldingJuist"
-                    android:src="@drawable/afbeeldingjuist" />
+                    android:src="@drawable/afbeeldingjuist"
+                    android:onClick="onClickJuistFout" />
 
                 <ImageView
                     android:id="@+id/afbeeldingFout"
@@ -83,8 +85,10 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_margin="8dp"
+                    android:tag="1"
                     android:contentDescription="@string/afbeeldingFout"
-                    android:src="@drawable/afbeeldingfout" />
+                    android:src="@drawable/afbeeldingfout"
+                    android:onClick="onClickJuistFout" />
             </TableRow>
         </TableLayout>
 

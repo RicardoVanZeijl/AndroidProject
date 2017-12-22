@@ -466,4 +466,36 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.close();
         return lijst;
     }
+
+    public Woord getWoord(long woordID) {
+        String selectQuery = "SELECT * FROM woord WHERE woordID = " + woordID + "";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        Woord woord = new Woord();
+
+        if (cursor.moveToFirst()) {
+            woord = new Woord(cursor.getLong(0), cursor.getString(1), cursor.getShort(2), cursor.getLong(3), cursor.getString(4), cursor.getString(5), cursor.getString(6),  cursor.getString(7));
+        }
+        cursor.close();
+        db.close();
+        return woord;
+    }
+
+    public BepaaldLidwoord getBepaaldLidwoord(long bepaaldLidwoordID) {
+        String selectQuery = "SELECT * FROM bepaaldlidwoord WHERE bepaaldLidwoordID = " + bepaaldLidwoordID + "";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        BepaaldLidwoord bepaaldLidwoord = new BepaaldLidwoord();
+
+        if (cursor.moveToFirst()) {
+            bepaaldLidwoord = new BepaaldLidwoord(cursor.getLong(0), cursor.getString(1));
+        }
+        cursor.close();
+        db.close();
+        return bepaaldLidwoord;
+    }
 }

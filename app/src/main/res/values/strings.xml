@@ -12,33 +12,41 @@
     <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
     <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
     <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
+    <string name="title_activity_resultaat">Resultaat</string>
 
     <!--Custom Resources-->
     <string name="randomWord">Random Woord</string>
     <string name="randomImage">Random Afbeelding</string>
+
     <string name="preteachingtekst">Preteachingtekst</string>
     <string name="preteachingtekstTom">Preteachingtekst van Tom</string>
     <string name="preteachingplaat">Preteachingplaat</string>
-    <string name="startAvontuur">Start avontuur</string>
+    <string name="knopStartAvontuur">Start avontuur</string>
+
     <string name="afbeeldingTom">Afbeelding van Tom</string>
     <string name="tekstTom">Tekst van Tom</string>
     <string name="volgendeOefening">Volgende oefening</string>
-    <string name="contextzin">Contextzin</string>
+
+    <string name="tekstContextzin">Contextzin</string>
     <string name="afbeeldingJuist">Juist</string>
     <string name="afbeeldingFout">Fout</string>
+
     <string name="randomKeuze">Random Keuze</string>
 
     <string name="afbeeldingLeuk">Leuk</string>
     <string name="tekstLeuk">Leuk</string>
-
     <string name="afbeeldingInteressant">Interessant</string>
     <string name="tekstInteressant">Interessant</string>
-
     <string name="afbeeldingGrappig">Grappig</string>
     <string name="tekstGrappig">Grappig</string>
-
     <string name="afbeeldingMooi">Mooi</string>
     <string name="tekstMooi">Mooi</string>
+
+    <string name="tekstScore">Score:</string>
+    <string name="tekstStudentScore">10/10</string>
+    <string name="tekstTijd">Tijd:</string>
+    <string name="tekstStudentTijd">06:00</string>
+    <string name="knopStartNieuwAvontuur">Start nieuw avontuur</string>
 
 
 </resources>

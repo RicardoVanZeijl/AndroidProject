@@ -8,45 +8,4 @@
     tools:context="be.thomasmore.androidproject.Preteaching"
     tools:showIn="@layout/activity_preteaching">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-            android:id="@+id/preteachingtekst"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/preteachingtekst"
-            android:textSize="21sp"
-             />
-
-        <TextView
-            android:id="@+id/preteachingtekstTom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/preteachingtekst"
-            android:text="@string/preteachingtekstTom"
-            android:textSize="21sp"
-            />
-
-        <ImageView
-            android:id="@+id/preteachingplaat"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_below="@+id/preteachingtekstTom"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="8dp"
-            android:contentDescription="@string/preteachingplaat"
-            android:src="@drawable/preteachingplaat" />
-
-        <Button
-            android:id="@+id/startAvontuur"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/preteachingplaat"
-            android:layout_centerHorizontal="true"
-            android:onClick="onClickStartAvontuur"/>
-
-    </RelativeLayout>
-
 </android.support.constraint.ConstraintLayout>
