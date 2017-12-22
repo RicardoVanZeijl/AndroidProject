@@ -12,6 +12,7 @@ public class Score {
     private String score;
     private String tijd;
 
+
     public long getScoreID() {
         return scoreID;
     }
@@ -55,6 +56,8 @@ public class Score {
     public Score() {
     }
 
+    Student student = new Student();
+
     public Score(long scoreID, long studentID, long onderdeelID, String score, String tijd) {
         this.scoreID = scoreID;
         this.studentID = studentID;
@@ -67,7 +70,7 @@ public class Score {
     public String toString() {
         return "Score{" +
                 "scoreID=" + scoreID +
-                ", studentID=" + studentID +
+                ", studentID=" + student +
                 ", onderdeelID=" + onderdeelID +
                 ", score='" + score + '\'' +
                 ", tijd='" + tijd + '\'' +

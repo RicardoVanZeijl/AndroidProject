@@ -95,16 +95,11 @@ public class Woord {
 
     @Override
     public String toString() {
-        return "Woord{" +
-                "woordID=" + woordID +
-                ", woord='" + woord + '\'' +
-                ", onbepaaldLidwoord=" + onbepaaldLidwoord +
-                ", bepaaldLidwoordID=" + bepaaldLidwoordID +
-                ", definitie='" + definitie + '\'' +
-                ", juisteContextzin='" + juisteContextzin + '\'' +
-                ", fouteContextzin='" + fouteContextzin + '\'' +
-                ", lettergrepen='" + lettergrepen + '\'' +
-                '}';
+        return " woord: " + woord + "\n" +
+                " definitie: " + definitie + '\n' +
+                " juisteContextzin: " + juisteContextzin + '\n' +
+                " fouteContextzin: " + fouteContextzin + '\n' +
+                " lettergrepen: " + lettergrepen;
     }
 }
 
