@@ -3,83 +3,44 @@ package be.thomasmore.androidproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.Toast;
-import android.support.v7.widget.Toolbar;
-
+import android.widget.ListView;
 
 import java.util.List;
 
 /**
- * Created by larsg.
- *
+ * Created by larsg on 22/12/2017.
  */
 
-public class Startpagina extends AppCompatActivity {
+public class AdminFouten extends AppCompatActivity {
 
     private DatabaseHelper db;
 
-
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_startpagina);
+        setContentView(R.layout.activity_admin_fouten);
 
         Toolbar toolbarAdmin = findViewById(R.id.toolbar);
         setSupportActionBar(toolbarAdmin);
 
         db = new DatabaseHelper(this);
-        readGroepen();
-
-        final Button button = findViewById(R.id.buttonStart);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-
-                EditText name = (EditText) findViewById(R.id.studentNaam);
-
-                if (name.getText().toString().isEmpty()) {
-                    Toast.makeText(getApplicationContext(), "Vul je naam in!", Toast.LENGTH_SHORT).show();
-                } else {
-                    EditText naamStudent = (EditText) findViewById(R.id.studentNaam);
-                    String naam = naamStudent.getText().toString();
-
-                    Spinner groepen = (Spinner) findViewById(R.id.spinnerGroepen);
-                    Groep groep = new Groep();
-                    groep = (Groep) groepen.getSelectedItem();
-
-                    Student student = new Student();
-                    student.setNaam(naam);
-                    student.setGroepID(groep.getGroepID());
-
-                    long studentID = db.insertStudent(student);
-
-                    Bundle bundle = new Bundle();
-                    bundle.putLong("studentID", studentID);
-                    Intent i = new Intent(Startpagina.this, Voormeting.class);
-                    i.putExtras(bundle);
-
-                    startActivity(i);
-                }
-            }
-
-        });
+        readFouten();
     }
 
+    // scores inlezen in listview
+    private void readFouten() {
+        final List<Fout> fouten = db.getFouten();
 
-    private void readGroepen() {
-        final List<Groep> groepen = db.getGroepen();
+        ArrayAdapter<Fout> adapter = new ArrayAdapter<Fout>(this, android.R.layout.simple_list_item_1, fouten);
 
-        ArrayAdapter<Groep> adapter = new ArrayAdapter<Groep>(this, android.R.layout.simple_spinner_item, groepen);
-
-        final Spinner groepenSpinner = (Spinner) findViewById(R.id.spinnerGroepen);
-        groepenSpinner.setAdapter(adapter);
+        final ListView lijst = (ListView) findViewById(R.id.lijstfouten);
+        lijst.setAdapter(adapter);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -139,3 +100,4 @@ public class Startpagina extends AppCompatActivity {
         }
     }
 }
+

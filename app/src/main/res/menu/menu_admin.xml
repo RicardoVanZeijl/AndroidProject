@@ -12,6 +12,30 @@
             <item
                 android:id="@+id/menu_scores"
                 android:title="Scores" />
+            <item
+                android:id="@+id/menu_fouten"
+                android:title="Fouten" />
+            <item
+                android:id="@+id/menu_groepen"
+                android:title="Groepen" />
+            <item
+                android:id="@+id/menu_keuzes"
+                android:title="Keuzes" />
+            <item
+                android:id="@+id/menu_lijsten"
+                android:title="Lijsten" />
+            <item
+                android:id="@+id/menu_onderdelen"
+                android:title="Onderdelen" />
+            <item
+                android:id="@+id/menu_onderzoeken"
+                android:title="Onderzoeken" />
+            <item
+                android:id="@+id/menu_woorden"
+                android:title="Woorden" />
+            <item
+                android:id="@+id/menu_woordenlijsten"
+                android:title="Woordenlijsten" />
         </menu>
     </item>
     <item

@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         <!-- SplashScreen -->
         <activity
@@ -19,7 +19,6 @@
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -42,6 +41,62 @@
         <activity
             android:name=".AdminStudent"
             android:label="Studenten beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin fouten -->
+        <activity
+            android:name=".AdminFouten"
+            android:label="Fouten beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin groepen -->
+        <activity
+            android:name=".AdminGroepen"
+            android:label="Groepen beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin keuzes -->
+        <activity
+            android:name=".AdminKeuzes"
+            android:label="Keuzes beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin lijsten -->
+        <activity
+            android:name=".AdminLijsten"
+            android:label="Lijsten beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin onderdelen -->
+        <activity
+            android:name=".AdminOnderdelen"
+            android:label="Onderdelen beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin onderzoeken -->
+        <activity
+            android:name=".AdminOnderzoeken"
+            android:label="Onderzoeken beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin woorden -->
+        <activity
+            android:name=".AdminWoorden"
+            android:label="Woorden beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin woordenlijsten -->
+        <activity
+            android:name=".AdminWoordlijsten"
+            android:label="Woordenlijsten beheren"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
 

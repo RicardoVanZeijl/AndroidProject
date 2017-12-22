@@ -389,6 +389,52 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return student;
     }
 
+    //delete studenten
+    public boolean deleteStudent(long id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        int numrows = db.delete(
+                "naam", "id=?",
+                new String[]{String.valueOf(id)});
+        db.close();
+        return numrows > 0;
+
+    }
+
+    //aantal studenten
+    public int getCountStudenten() {
+        String selectQuery = "SELECT * FROM student";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+        int aantal = cursor.getCount();
+
+        cursor.close();
+        db.close();
+        return aantal;
+    }
+
+    //lijst van studenten voor Listview
+    public List<Student> getStudenten() {
+        List<Student> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM student ORDER BY naam";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Student student = new Student(cursor.getLong(0),
+                        cursor.getString(1), cursor.getLong(2));
+                lijst.add(student);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
 
     public List<Score> getScores() {
         List<Score> lijst = new ArrayList<>();
@@ -430,6 +476,135 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.close();
         return lijst;
     }
+
+    //lijst van fouten voor Listview
+    public List<Fout> getFouten() {
+        List<Fout> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM fout";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Fout fout = new Fout(cursor.getLong(0),
+                        cursor.getLong(1), cursor.getLong(2), cursor.getLong(3));
+                lijst.add(fout);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //lijst van keuzes voor Listview
+    public List<Keuze> getKeuzes() {
+        List<Keuze> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM keuze";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Keuze keuze = new Keuze(cursor.getLong(0),
+                        cursor.getString(1));
+                lijst.add(keuze);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //lijst van onderdelen voor Listview
+    public List<Onderdeel> getOnderdelen() {
+        List<Onderdeel> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM onderdeel";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Onderdeel onderdeel = new Onderdeel(cursor.getLong(0),
+                        cursor.getString(1));
+                lijst.add(onderdeel);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //lijst van onderzoeken voor Listview
+    public List<Onderzoek> getOnderzoeken() {
+        List<Onderzoek> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM onderzoek";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Onderzoek onderzoek = new Onderzoek(cursor.getLong(0),
+                        cursor.getLong(1), cursor.getLong(2), cursor.getLong(3));
+                lijst.add(onderzoek);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //lijst van woord voor Listview
+    public List<Woord> getWoorden() {
+        List<Woord> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM woord";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Woord woord = new Woord(cursor.getLong(0),
+                        cursor.getString(1), cursor.getShort(2),
+                        cursor.getLong(3), cursor.getString(4),
+                        cursor.getString(5), cursor.getString(6), cursor.getString(7));
+                lijst.add(woord);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
+    //lijst van woordenlijsten voor Listview
+    public List<Woordenlijst> getWoordenlijsten() {
+        List<Woordenlijst> lijst = new ArrayList<>();
+        String selectQuery = "SELECT * FROM woordenlijst";
+
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                Woordenlijst woordenlijst = new Woordenlijst(cursor.getLong(0),
+                        cursor.getLong(1), cursor.getLong(2));
+                lijst.add(woordenlijst);
+            } while (cursor.moveToNext());
+        }
+
+        cursor.close();
+        db.close();
+        return lijst;
+    }
+
 
     //'lijst' aangepast naar list omdat de tabel ook lijst heeft als naam
     public List<Lijst> getLijsten() {

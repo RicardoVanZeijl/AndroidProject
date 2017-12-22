@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    tools:showIn="@layout/activity_admin_punten">>
+    tools:showIn="@layout/activity_admin_onderdelen">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -17,7 +17,7 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ListView
-        android:id="@+id/lijstscore"
+        android:id="@+id/lijstonderdelen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:dividerHeight="1dp" />
