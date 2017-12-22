@@ -31,6 +31,20 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
 
+        <!-- Admin punten -->
+        <activity
+            android:name=".AdminPunten"
+            android:label="Scores beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin student -->
+        <activity
+            android:name=".AdminStudent"
+            android:label="Studenten beheren"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <!-- Voormeting -->
         <activity
             android:name=".Voormeting"
