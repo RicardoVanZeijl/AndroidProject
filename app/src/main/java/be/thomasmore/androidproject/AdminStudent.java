@@ -17,7 +17,7 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by larsg on 21/12/2017.
+ * Created by larsg.
  */
 
 public class AdminStudent extends AppCompatActivity {

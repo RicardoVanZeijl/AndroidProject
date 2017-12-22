@@ -35,9 +35,6 @@ public class Keuze {
 
     @Override
     public String toString() {
-        return "Keuze{" +
-                "keuzeID=" + keuzeID +
-                ", keuze='" + keuze + '\'' +
-                '}';
+        return keuze;
     }
 }

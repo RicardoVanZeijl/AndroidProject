@@ -12,7 +12,7 @@ import android.widget.ListView;
 import java.util.List;
 
 /**
- * Created by larsg on 22/12/2017.
+ * Created by larsg on.
  */
 
 public class AdminLijsten extends AppCompatActivity {

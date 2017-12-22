@@ -13,7 +13,7 @@ import java.util.List;
 
 
 /**
- * Created by larsg on 19/12/2017.
+ * Created by larsg.
  */
 
 public class AdminPunten extends AppCompatActivity {
