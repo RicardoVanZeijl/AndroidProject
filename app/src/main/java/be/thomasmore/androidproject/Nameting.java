@@ -78,7 +78,10 @@ public class Nameting extends AppCompatActivity {
 
     private void volgendWoord(){
         TextView woord = findViewById(R.id.randomWoord);
-        woord.setText(woorden.get(index).getWoord());
+
+        BepaaldLidwoord bepaaldLidwoord = db.getBepaaldLidwoord( woorden.get(index).getBepaaldLidwoordID());
+
+        woord.setText(bepaaldLidwoord.getBepaaldLidwoord() +" " + woorden.get(index).getWoord());
 
         ArrayList<String> afbeeldingen = new ArrayList<>();
 

@@ -57,7 +57,7 @@ public class Conditie1Oefening3 extends AppCompatActivity {
         woord = db.getWoord(woordIDs[index]);
 
         TextView tekst = findViewById(R.id.tekstTom);
-        tekst.setText("Ik zou graag het woord " + woord.getWoord() + " in een zinnetje gebruiken. Zoek je mee naar een goede zin? Ik zeg een zin. Vind je dit een goede zin? Druk dan op de groene duim. Vind je dit geen goede zin? Druk dan op de rode duim");
+        tekst.setText("Ik zou graag het woord " + woord.getWoord() + " in een zinnetje gebruiken. Zoek je mee naar een goede zin? Ik zeg een zin. Vind je dit een goede zin? Druk dan op de groene duim. Vind je dit geen goede zin? Druk dan op de rode duim.");
 
         contextzinnen = new ArrayList<>();
 

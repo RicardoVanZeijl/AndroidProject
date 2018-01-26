@@ -31,20 +31,6 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <!-- Admin punten -->
-        <activity
-            android:name=".AdminScores"
-            android:label="Scores beheren"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
-
-        <!-- Admin student -->
-        <activity
-            android:name=".AdminStudent"
-            android:label="Studenten beheren"
-            android:screenOrientation="landscape"
-            android:theme="@style/AppTheme.NoActionBar" />
-
         <!-- Voormeting -->
         <activity
             android:name=".Voormeting"
@@ -59,7 +45,7 @@
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
 
-        <!-- Conditie 1 Oefening 1 & Oefening2 -->
+        <!-- Conditie 1 Oefeningen 1 tot en met 6 -->
         <activity
             android:name=".Conditie1Oefening1"
             android:label="@string/title_activity_conditie1_oefening1"
@@ -85,18 +71,92 @@
             android:label="@string/title_activity_conditie1_oefening6"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Resultaat"
-            android:label="@string/title_activity_resultaat"
-            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Nameting -->
         <activity
             android:name=".Nameting"
             android:label="@string/title_activity_nameting"
+            android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Resultaat -->
         <activity
-            android:name=".AdminSymantischWeb"
+            android:name=".Resultaat"
+            android:label="@string/title_activity_resultaat"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Admin -->
+        <activity
+            android:name=".AdminStudenten"
+            android:label="@string/title_activity_admin_studenten"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminGroepen"
+            android:label="@string/title_activity_admin_groepen"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminOnderzoeken"
+            android:label="@string/title_activity_admin_onderzoeken"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminLijsten"
+            android:label="@string/title_activity_admin_lijsten"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminWoordenlijsten"
+            android:label="@string/title_activity_admin_woordenlijsten"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminWoorden"
+            android:label="@string/title_activity_admin_woorden"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminScores"
+            android:label="@string/title_activity_admin_scores"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminOnderdelen"
+            android:label="@string/title_activity_admin_onderdelen"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminFouten"
+            android:label="@string/title_activity_admin_fouten"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminSymantischeWebben"
             android:label="@string/title_activity_admin_symantisch_web"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AdminKeuzes"
+            android:label="@string/title_activity_admin_keuzes"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <!-- Example -->
+        <activity
+            android:name=".Example"
+            android:label="@string/title_activity_example"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

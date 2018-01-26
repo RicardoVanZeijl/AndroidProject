@@ -25,73 +25,79 @@ public class AdminFouten extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_fouten);
 
-        Toolbar toolbarAdmin = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbarAdmin);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         db = new DatabaseHelper(this);
         readFouten();
     }
 
-    // scores inlezen in listview
     private void readFouten() {
         final List<Fout> fouten = db.getFouten();
 
         ArrayAdapter<Fout> adapter = new ArrayAdapter<Fout>(this, android.R.layout.simple_list_item_1, fouten);
 
-        final ListView lijst = (ListView) findViewById(R.id.lijstfouten);
+        final ListView lijst = (ListView) findViewById(R.id.lijstFouten);
         lijst.setAdapter(adapter);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_admin, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_studenten_beheren:
-                Intent intent = new Intent(this, AdminStudent.class);
-                startActivity(intent);
+            case R.id.studenten:
+                Intent intent0 = new Intent(this, AdminStudenten.class);
+                startActivity(intent0);
                 return true;
-            case R.id.menu_scores:
-                Intent i = new Intent(this, AdminScores.class);
-                startActivity(i);
-                return true;
-            case R.id.menu_fouten:
-                Intent in = new Intent(this, AdminFouten.class);
-                startActivity(in);
-                return true;
-            case R.id.menu_groepen:
-                Intent inte = new Intent(this, AdminGroepen.class);
-                startActivity(inte);
-                return true;
-            case R.id.menu_keuzes:
-                Intent inten = new Intent(this, AdminKeuzes.class);
-                startActivity(inten);
-                return true;
-            case R.id.menu_lijsten:
-                Intent intent1 = new Intent(this, AdminLijsten.class);
+            case R.id.groepen:
+                Intent intent1 = new Intent(this, AdminGroepen.class);
                 startActivity(intent1);
                 return true;
-            case R.id.menu_onderdelen:
-                Intent intent2 = new Intent(this, AdminOnderdelen.class);
+            case R.id.onderzoeken:
+                Intent intent2 = new Intent(this, AdminOnderzoeken.class);
                 startActivity(intent2);
                 return true;
-            case R.id.menu_onderzoeken:
-                Intent intent3 = new Intent(this, AdminOnderzoeken.class);
+            case R.id.onderdelen:
+                Intent intent3 = new Intent(this, AdminOnderdelen.class);
                 startActivity(intent3);
                 return true;
-            case R.id.menu_woorden:
-                Intent intent4 = new Intent(this, AdminWoorden.class);
+            case R.id.lijsten:
+                Intent intent4 = new Intent(this, AdminLijsten.class);
                 startActivity(intent4);
                 return true;
-            case R.id.menu_woordenlijsten:
-                Intent intent5 = new Intent(this, AdminWoordlijsten.class);
+            case R.id.woordenlijsten:
+                Intent intent5 = new Intent(this, AdminWoordenlijsten.class);
                 startActivity(intent5);
+                return true;
+            case R.id.woorden:
+                Intent intent6 = new Intent(this, AdminWoorden.class);
+                startActivity(intent6);
+                return true;
+            case R.id.symantischWeb:
+                Intent intent7 = new Intent(this, AdminSymantischeWebben.class);
+                startActivity(intent7);
+                return true;
+            case R.id.keuzes:
+                Intent intent8 = new Intent(this, AdminKeuzes.class);
+                startActivity(intent8);
+                return true;
+            case R.id.scores:
+                Intent intent9 = new Intent(this, AdminScores.class);
+                startActivity(intent9);
+                return true;
+            case R.id.fouten:
+                Intent intent10 = new Intent(this, AdminFouten.class);
+                startActivity(intent10);
+                return true;
+            case R.id.nieuwOnderzoek:
+                Intent intent11 = new Intent(this, Startpagina.class);
+                startActivity(intent11);
                 return true;
             case R.id.afsluiten:
                 finish();

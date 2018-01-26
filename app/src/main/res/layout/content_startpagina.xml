@@ -37,7 +37,7 @@
 
                 <EditText
                     android:id="@+id/studentNaam"
-                    android:inputType="textPersonName"
+                    android:inputType="text"
                     android:maxLength="21" />
             </TableRow>
 
@@ -64,6 +64,7 @@
             android:layout_below="@id/tabel"
             android:layout_centerHorizontal="true"
             android:text="@string/knopStartOnderzoek"
+            android:textSize="21sp"
             android:onClick="onClickStartOnderzoek"/>
 
     </RelativeLayout>

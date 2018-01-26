@@ -62,6 +62,12 @@ public class Conditie1Oefening6 extends AppCompatActivity {
         }
 
         tom.append(woord.getWoord() + ". Wat een leuk woord is " + woord.getWoord() + " toch? Wat vind jij van het woord  '" + woord.getWoord() +"'?");
+
+        speakText(tom.getText().toString());
+    }
+
+    public void speakText(String toSpeak) {
+        tts.speak(toSpeak, TextToSpeech.QUEUE_ADD, null);
     }
 
     public void onClickStartNameting(View view) {

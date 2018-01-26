@@ -22,7 +22,7 @@ public class Conditie1Oefening4 extends AppCompatActivity {
     private DatabaseHelper db;
 
     long[] woordIDs;
-    List<String> contextzinnen;
+    List<Keuze> keuzes;
 
     Woord woord;
 
@@ -62,6 +62,16 @@ public class Conditie1Oefening4 extends AppCompatActivity {
         }
 
         tom.append(woord.getWoord() + ". Eentje niet. Sleep de woordjes die passen bij " + woord.getWoord() + " naar de vakjes.");
+
+        TextView randomWoord = findViewById(R.id.randomWoord);
+        randomWoord.setText(woord.getWoord());
+
+        keuzes = db.getKeuzesFromWoord(woord.getWoordID());
+
+        for (int i = 0; i < keuzes.size(); i++) {
+            TextView text = findViewById(getResources().getIdentifier(("randomKeuze" + i), "id", getPackageName()));
+            text.setText(keuzes.get(i).getKeuze());
+        }
 
         speakText(tom.getText().toString());
     }

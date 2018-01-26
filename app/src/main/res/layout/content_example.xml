@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="be.thomasmore.androidproject.AdminSymantischWeb"
-    tools:showIn="@layout/activity_admin_symantisch_web">
+    tools:context="be.thomasmore.androidproject.Example"
+    tools:showIn="@layout/activity_example">
 
 </android.support.constraint.ConstraintLayout>

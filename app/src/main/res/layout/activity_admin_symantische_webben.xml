@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="be.thomasmore.androidproject.AdminSymantischWeb">
+    tools:context="be.thomasmore.androidproject.AdminSymantischeWebben">
 
-    <include layout="@layout/content_admin_symantisch_web" />
+    <include layout="@layout/content_admin_symantische_webben" />
 
 </android.support.design.widget.CoordinatorLayout>

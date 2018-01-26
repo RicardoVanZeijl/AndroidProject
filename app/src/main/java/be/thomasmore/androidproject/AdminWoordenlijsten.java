@@ -16,34 +16,35 @@ import java.util.List;
  *
  */
 
-public class AdminLijsten extends AppCompatActivity {
+public class AdminWoordenlijsten extends AppCompatActivity {
 
     private DatabaseHelper db;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_lijsten);
+        setContentView(R.layout.activity_admin_woordenlijsten);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         db = new DatabaseHelper(this);
-        readLijsten();
+        readWoordenlijsten();
     }
 
-    private void readLijsten() {
-        final List<Lijst> lijsten = db.getLijsten();
+    private void readWoordenlijsten() {
+        final List<Woordenlijst> woordenlijsten = db.getWoordenlijsten();
 
-        ArrayAdapter<Lijst> adapter = new ArrayAdapter<Lijst>(this, android.R.layout.simple_list_item_1, lijsten);
+        ArrayAdapter<Woordenlijst> adapter = new ArrayAdapter<Woordenlijst>(this, android.R.layout.simple_list_item_1, woordenlijsten);
 
-        final ListView lijst = (ListView) findViewById(R.id.lijstLijsten);
+        final ListView lijst = (ListView) findViewById(R.id.lijstWoordenlijsten);
         lijst.setAdapter(adapter);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }

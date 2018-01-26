@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="be.thomasmore.androidproject.AdminGroepen"
-    tools:showIn="@layout/activity_admin_groepen">
+    tools:context="be.thomasmore.androidproject.AdminStudenten"
+    tools:showIn="@layout/activity_admin_studenten">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
         <ListView
-            android:id="@+id/lijstGroepen"
+            android:id="@+id/lijstStudenten"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@+id/toolbar"

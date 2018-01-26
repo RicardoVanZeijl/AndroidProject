@@ -45,8 +45,8 @@
 
         <ImageView
             android:id="@+id/randomAfbeelding0"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/randomWoord"
             android:layout_margin="8dp"
             android:contentDescription="@string/randomImage"
@@ -55,8 +55,8 @@
 
         <ImageView
             android:id="@+id/randomAfbeelding1"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/randomWoord"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
@@ -67,8 +67,8 @@
 
         <ImageView
             android:id="@+id/randomAfbeelding2"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/randomAfbeelding0"
             android:layout_margin="8dp"
             android:contentDescription="@string/randomImage"
@@ -77,8 +77,8 @@
 
         <ImageView
             android:id="@+id/randomAfbeelding3"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="250dp"
+            android:layout_height="125dp"
             android:layout_below="@+id/randomAfbeelding1"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"

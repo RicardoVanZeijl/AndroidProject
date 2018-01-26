@@ -37,7 +37,7 @@
             <ImageView
                 android:id="@+id/randomAfbeelding0"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="125dp"
                 android:layout_below="@+id/randomWoord"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="8dp"
@@ -48,7 +48,7 @@
             <ImageView
                 android:id="@+id/randomAfbeelding1"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="125dp"
                 android:layout_below="@+id/randomAfbeelding0"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="8dp"
@@ -59,7 +59,7 @@
             <ImageView
                 android:id="@+id/randomAfbeelding2"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="125dp"
                 android:layout_below="@+id/randomAfbeelding1"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="8dp"
@@ -70,7 +70,7 @@
             <ImageView
                 android:id="@+id/randomAfbeelding3"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="125dp"
                 android:layout_below="@+id/randomAfbeelding2"
                 android:layout_centerHorizontal="true"
                 android:layout_margin="8dp"

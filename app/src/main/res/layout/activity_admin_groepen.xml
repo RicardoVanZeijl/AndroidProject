@@ -5,5 +5,4 @@
 
     <include layout="@layout/content_admin_groepen" />
 
-
 </android.support.constraint.ConstraintLayout>

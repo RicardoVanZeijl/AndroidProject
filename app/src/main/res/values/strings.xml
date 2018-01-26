@@ -3,22 +3,31 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_splashscreen">SplashScreen</string>
     <string name="title_activity_startpagina">Startpagina</string>
-    <string name="title_activity_admin_symantisch_web">AdminSymantischWeb</string>
     <string name="title_activity_voormeting">Voormeting</string>
     <string name="title_activity_preteaching">Preteaching</string>
-    <string name="title_activity_conditie1_oefening1">Conditie1Oefening1</string>
-    <string name="title_activity_conditie1_oefening2">Conditie1Oefening2</string>
-    <string name="title_activity_conditie1_oefening3">Conditie1Oefening3</string>
-    <string name="title_activity_conditie1_oefening4">Conditie1Oefening4</string>
-    <string name="title_activity_conditie1_oefening5">Conditie1Oefening5</string>
-    <string name="title_activity_conditie1_oefening6">Conditie1Oefening6</string>
+    <string name="title_activity_conditie1_oefening1">Conditie 1 Oefening 1</string>
+    <string name="title_activity_conditie1_oefening2">Conditie 1 Oefening 2</string>
+    <string name="title_activity_conditie1_oefening3">Conditie 1 Oefening 3</string>
+    <string name="title_activity_conditie1_oefening4">Conditie 1 Oefening 4</string>
+    <string name="title_activity_conditie1_oefening5">Conditie 1 Oefening 5</string>
+    <string name="title_activity_conditie1_oefening6">Conditie 1 Oefening 6</string>
     <string name="title_activity_nameting">Nameting</string>
     <string name="title_activity_resultaat">Resultaat</string>
-
+    <string name="title_activity_admin_studenten">Studenten beheren</string>
+    <string name="title_activity_admin_groepen">Groepen beheren</string>
+    <string name="title_activity_admin_onderzoeken">Onderzoeken beheren</string>
+    <string name="title_activity_admin_lijsten">Lijsten beheren</string>
+    <string name="title_activity_admin_woordenlijsten">Woordenlijsten beheren</string>
+    <string name="title_activity_admin_woorden">Woorden beheren</string>
+    <string name="title_activity_admin_scores">Scores bekijken</string>
+    <string name="title_activity_admin_onderdelen">Onderdelen beheren</string>
+    <string name="title_activity_admin_fouten">Fouten bekijken</string>
+    <string name="title_activity_admin_symantisch_web">Symantische webben beheren</string>
+    <string name="title_activity_admin_keuzes">Keuzes beheren</string>
 
     <!--Custom Resources-->
     <string name="afbeeldingSplashScreen">Naam:</string>
-    <string name="tekstSplashScreen">Project 2 Groep 2</string>
+    <string name="tekstSplashScreen">Project 2 Groep 2: Lars Gijbels &amp; Ricardo van Zeijl</string>
 
     <string name="tekstNaam">Naam:</string>
     <string name="tekstGroep">Groep:</string>
@@ -59,7 +68,7 @@
     <string name="tekstStudentTijd">06:00</string>
 
     <string name="knopStartNieuwOnderzoek">Start nieuw onderzoek</string>
-
+    <string name="title_activity_example">Example</string>
 
 
 </resources>

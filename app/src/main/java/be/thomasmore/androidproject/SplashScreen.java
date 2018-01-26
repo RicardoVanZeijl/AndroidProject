@@ -6,13 +6,13 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Created by larsg.
+ * Created by Lars Gijbels.
  *
  */
 
 public class SplashScreen extends AppCompatActivity {
 
-    private final int SPLASH_DISPLAY_LENGTH = 1000;
+    private final int SPLASH_DISPLAY_LENGTH = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,6 @@ public class SplashScreen extends AppCompatActivity {
             @Override
             public void run() {
 
-                // naar startscherm
                 Intent i;
                 i = new Intent(SplashScreen.this, Startpagina.class);
                 SplashScreen.this.startActivity(i);

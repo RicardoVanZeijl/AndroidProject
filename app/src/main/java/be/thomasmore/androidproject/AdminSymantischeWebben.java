@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -12,40 +11,32 @@ import android.widget.ListView;
 import java.util.List;
 
 /**
- * Created by Lars Gijbels.
+ * Created by Ricardo van Zeijl.
  *
  */
 
-public class AdminLijsten extends AppCompatActivity {
+public class AdminSymantischeWebben extends AppCompatActivity {
 
     private DatabaseHelper db;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_lijsten);
+        setContentView(R.layout.activity_admin_symantische_webben);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        db = new DatabaseHelper(this);
-        readLijsten();
+        readSymantischeWebben();
     }
 
-    private void readLijsten() {
-        final List<Lijst> lijsten = db.getLijsten();
+    private void readSymantischeWebben() {
+        final List<SymantischWeb> symantischeWebben = db.getSymantischeWebben();
 
-        ArrayAdapter<Lijst> adapter = new ArrayAdapter<Lijst>(this, android.R.layout.simple_list_item_1, lijsten);
+        ArrayAdapter<SymantischWeb> adapter = new ArrayAdapter<SymantischWeb>(this, android.R.layout.simple_list_item_1, symantischeWebben);
 
-        final ListView lijst = (ListView) findViewById(R.id.lijstLijsten);
+        final ListView lijst = (ListView) findViewById(R.id.lijstSymantischeWebben);
         lijst.setAdapter(adapter);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
     @Override
